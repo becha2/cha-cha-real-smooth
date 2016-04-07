@@ -54,6 +54,9 @@
 	margin-left: 32px;
 }
 
-.caret {
-	display: inline-block;
+.glyphicon {
+	float: right;
+	position: absolute;
+	right: 100px;
+	top: 50%;
 }
