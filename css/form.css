@@ -2,7 +2,6 @@
 	position: relative;
 }
 .form-section {
-	box-shadow: #555555 0px 1px 5px -2px;
 	width: 62.8%;
 }
 
@@ -52,8 +51,12 @@
 	height: 100px;
 	line-height: 100px;
 	margin-left: 32px;
+	width: 85%;
 }
 
-.caret {
-	display: inline-block;
+.glyphicon {
+	float: right;
+	position: absolute;
+	right: 100px;
+	top: 50%;
 }
