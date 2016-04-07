@@ -1,0 +1,59 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    text-align: center;
+}
+
+.topBar{
+    height: 20%;
+}
+
+#main{
+    height: 60%;
+}
+
+.selection{
+    float: left;
+    height: 100%;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+}
+
+.preview{
+    float: right;
+    height: 100%;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
+}
+
+.navigation{
+    height: 20%;
+}
+
+.return{
+    float: left;
+    width: 34%;
+}
+
+#wrap3{
+    width: 66%;
+    float: right;
+}
+
+
+.mail{
+    float:left;
+    width: 50%;
+}
+
+.print{
+    float:right;
+    width: 50%;
+}
