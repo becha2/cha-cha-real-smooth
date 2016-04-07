@@ -6,64 +6,79 @@
 </head>
 <body>
 
-<div class="form-container">
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon parent-icon"></div>
-		<div class="section-title">Parent Comments</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+<div id="accordion" class="form-container panel-group">
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon parent-icon"></div>
+			<a class="section-title" data-toggle="collapse" data-target="#parent-body">Parent Comments</a>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="parent-body" class="section-body panel-collapse collapse">
+			<div class="panel-body">hi</div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon activities-icon"></div>
-		<div class="section-title">Activities</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon activities-icon"></div>
+			<div class="section-title" data-toggle="collapse" data-target="#activities-body">Activities</div>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="activities-body" class="section-body panel-collapse collapse">
+			<div class="panel-body">hi</div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon food-icon"></div>
-		<div class="section-title">Food</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon food-icon"></div>
+			<div class="section-title" data-toggle="collapse" data-target="#food-body">Food</div>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="food-body" class="section-body panel-collapse collapse">
+			<div class="panel-body"></div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon naps-icon"></div>
-		<div class="section-title">Naps</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon naps-icon"></div>
+			<div class="section-title" data-toggle="collapse" data-target="#naps-body">Naps</div>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="naps-body" class="section-body panel-collapse collapse">
+			<div class="panel-body"></div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon diaper-icon"></div>
-		<div class="section-title">Diaper</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon diaper-icon"></div>
+			<div class="section-title" data-toggle="collapse" data-target="#diaper-body">Diaper</div>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="diaper-body" class="section-body panel-collapse collapse">
+			<div class="panel-body"></div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 
-<div class="form-section">
-	<div class="section-heading">
-		<div class="section-icon other-icon"></div>
-		<div class="section-title">Other Comments</div>
-		<div class="glyphicon glyphicon-menu-right"></div>
+	<div class="form-section panel panel-default">
+		<div class="section-heading">
+			<div class="section-icon other-icon"></div>
+			<div class="section-title" data-toggle="collapse" data-target="#other-body">Other Comments</div>
+			<div class="glyphicon glyphicon-menu-right"></div>
+		</div>
+		<div id="other-body" class="section-body panel-collapse collapse">
+			<div class="panel-body"></div>
+		</div>
 	</div>
-	<div class="section-body"></div>
-</div>
 </div>
 
 </body>
 <footer>
+
 	<script src="../library/jquery-1.12.3.min.js"></script>
+	<script src="../library/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+	<script src="../js/form.js"></script>
 </footer>
 </html>
