@@ -1,11 +1,20 @@
+.form-container {
+	position: relative;
+}
+.form-section {
+	box-shadow: #555555 0px 1px 5px -2px;
+	width: 62.8%;
+}
+
 .section-heading {
-	height: 50px;
+	height: 100px;
+	position: relative;
 }
 
 .section-icon {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 100px;
+	height: 100px;
+	float: left;
 }
 
 .parent-icon {
@@ -39,7 +48,10 @@
 }
 
 .section-title {
-	display: inline-block;
+	float: left;
+	height: 100px;
+	line-height: 100px;
+	margin-left: 32px;
 }
 
 .caret {
