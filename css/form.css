@@ -1,0 +1,47 @@
+.section-heading {
+	height: 50px;
+}
+
+.section-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+
+.parent-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.activities-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.food-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.naps-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.diaper-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.other-icon {
+	background: url("../icons/parent.png") no-repeat;
+	background-size: cover;
+}
+
+.section-title {
+	display: inline-block;
+}
+
+.caret {
+	display: inline-block;
+}
