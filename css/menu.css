@@ -1,0 +1,33 @@
+.menu-sidebar {
+	height: 1000px;
+}
+
+.menu-title {
+	height:50px;
+	font-size: 25px;
+}
+
+.class {
+	height: 50px;
+}
+
+.class-heading {
+	height: 50px;
+	width: 80px;
+	position: relative;
+}
+
+.class-body {
+	height: 50px;
+}
+
+.class-name {
+	height: 50px;
+}
+
+.ui-icon {
+	width: 30px;
+	height: 30px;
+	float: right;
+	vertical-align: middle;
+}
