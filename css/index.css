@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    background-color: #F3E5F5;
+}
+
+body > * {
+	font-family: 'Economica', Arial, Verdana, sans-serif;
+    margin: 10px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.banner {
+    width: 100%;
+    background-color: #E1BEE7;
+    color: black;
+    margin: 0px 0px 20px 0px;
+}
+
+.banner-logo {
+	margin-left: 10px;
+	height: 80px;
+}
+
+#image-container > *{
+	margin-bottom: 10px;
+}
+
+.image-frame {
+	width: 300px;
+	height: 300px;
+	margin: 20px;
+	display: inline-block;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
