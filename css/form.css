@@ -1,6 +1,26 @@
+body{
+	padding: 10px;
+}
 .form-container {
 	position: relative;
 	width: 62.8%;
+}
+
+.indiv-section {
+	height: 150px;
+	width: 62.8%;
+	position: relative;
+}
+
+.indiv-info {
+	height: 100px;
+	margin-left: 32px;
+	float: left;
+	padding-top: 25px;
+}
+
+#accordion {
+	margin-top: 32px;
 }
 
 .section-heading {
@@ -15,33 +35,36 @@
 	float: left;
 }
 
+.indiv-icon {
+	width: 150px;
+	height: 150px;
+	background: url("../icons/index/c.jpg") no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+}
+
 .parent-icon {
 	background: url("../icons/parent.png") no-repeat;
 	background-size: cover;
 }
 
 .activities-icon {
-	background: url("../icons/parent.png") no-repeat;
+	background: url("../icons/alphabet-blocks.png") no-repeat;
 	background-size: cover;
 }
 
 .food-icon {
-	background: url("../icons/parent.png") no-repeat;
+	background: url("../icons/food.png") no-repeat;
 	background-size: cover;
 }
 
 .naps-icon {
-	background: url("../icons/parent.png") no-repeat;
+	background: url("../icons/nap.png") no-repeat;
 	background-size: cover;
 }
 
 .diaper-icon {
-	background: url("../icons/parent.png") no-repeat;
-	background-size: cover;
-}
-
-.other-icon {
-	background: url("../icons/parent.png") no-repeat;
+	background: url("../icons/diaper.png") no-repeat;
 	background-size: cover;
 }
 
@@ -50,7 +73,6 @@
 	height: 100px;
 	line-height: 100px;
 	margin-left: 32px;
-	width: 85%;
 }
 
 .glyphicon {
@@ -67,12 +89,17 @@
 }
 
 textarea {
-	max-width: 90%;
-	max-height: 100%;
 	padding: 10px;
-	z-index: 10;
+	max-width: 90%;
+	display: block;
+	resize: none;
 }
 
 .ui-state-focus {
 	outline: none;
+}
+
+.save-btn {
+	float: right;
+	margin: 5px 80px 5px 0;
 }
