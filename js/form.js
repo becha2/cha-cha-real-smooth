@@ -1,8 +1,16 @@
 
 $(function () {
 
-	$('.section-body').on('hide.bs.collapse show.bs.collapse', function(){
-		var icon = $(this).parent().find('.glyphicon');
+	$('.section-heading').click(function(e){
+
+		var parent = $(this).parent();
+		var icon = parent.find('.glyphicon');
 		icon.toggleClass('glyphicon-menu-down glyphicon-menu-right');
 	});
+
+	$('#accordion2').accordion({
+		active: false,
+		collapsible: true
+	});
+
 });
