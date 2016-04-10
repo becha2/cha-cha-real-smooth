@@ -1,20 +1,22 @@
 body {
     margin: 0px;
-    background-color: #F3E5F5;
+    background-color: #ffffff;
 }
 
 body > * {
-	font-family: 'Economica', Arial, Verdana, sans-serif;
+	font-family: Arial, Verdana, sans-serif;
+	color: black;
     margin: 10px;
 }
 
 h1 {
+	font-family: 'Economica';
 	font-size: 3em;
 }
 
 .banner {
     width: 100%;
-    background-color: #E1BEE7;
+    background-color: #ad4cbd;
     color: black;
     margin: 0px 0px 20px 0px;
 }
@@ -25,7 +27,7 @@ h1 {
 }
 
 #image-container > *{
-	margin-bottom: 10px;
+	margin: 20px 0;
 }
 
 .image-frame {
@@ -36,4 +38,40 @@ h1 {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
+}
+
+.student-photo {
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+.student-photo:hover + .icon-container {
+	height: 50px;
+	background-color: red;
+}
+
+.btn-custom, btn-custom:visited:hover:active {
+	color: white;
+	margin-bottom: 20px;
+}
+
+.btn-custom {
+	border-color: #FFBA63;
+	background-color: #FFA739;
+}
+
+.btn-custom:hover {
+	color: white;
+	border-color: #FF8E00;
+	background-color: #C56E00;
+}
+
+.btn-custom:active {
+	color: white;
+	background-color: #9B5600;
+}
+
+.col-center {
+	float: none;	
+	margin: 0 auto;
 }
