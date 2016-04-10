@@ -8,10 +8,13 @@ body, html {
 }
 
 #main{
-    margin-bottom: 5%;
+    margin-bottom: 20px;
 }
 
 .selection{
     text-align: left;
 }
 
+iframe{
+    margin-top: 20px;
+}
