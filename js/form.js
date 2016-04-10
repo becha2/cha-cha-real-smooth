@@ -2,8 +2,6 @@
 $(function () {
 	// $('#result').load('ajax/test.html #container');
 	// var wanted_html = $('class-form.html .form-content');
-	// console.log(wanted_html);
-	$('.form-container').load('class-form.html');
 	// $('.form-container').html()
 	$('.section-heading').click(function(){
 		var parent = $(this).parent();
