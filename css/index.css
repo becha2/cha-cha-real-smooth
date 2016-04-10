@@ -1,5 +1,14 @@
 @import "mainLayout.css";
 
+.glyphicon {
+	font-size: 24px;
+}
+
 #image-container > *{
 	margin: 20px 0;
+}
+
+.student-photo {
+	cursor: pointer;
+	margin-right: 0;
 }
