@@ -13,8 +13,19 @@ body, html {
 
 .selection{
     text-align: left;
+    height: 100%;
 }
 
 iframe{
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.navigation{
+    text-align: center;
+    padding: 6px 12px;
+}
+
+#select-all{
+    margin-bottom: 12px;
 }
