@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/mainLayout.css">
 	<link rel="stylesheet" type="text/css" href="../css/export.css">
 </head>
 <body>
@@ -16,14 +17,15 @@
     </div>
 
     <div class="row" id="main">
-        <div class="selection col-sm-6">
+        <div class="col-sm-1"></div>
+        <div class="selection col-sm-5">
         	<div class="students" id="classA">
                 <table class="table table-hover">
                 <thead>
                     <tr><th>Class B Students</th><th>Notes</th></tr>
                 </thead>
                 <tbody>
-                    <tr class="warning"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
+                    <tr class="active"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
                     <tr><td>Mandy</td><td></td></tr>
                     <tr><td>Kyle</td><td></td></tr>
                     <tr class="warning"><td>Sarah</td><td>Absent</td></tr>
@@ -31,30 +33,33 @@
                 </table>
             </div>
             <button type="button" class="btn btn-default btn-block" id="select-all">Select All</button>
-        </div>
-        <div class="preview col-sm-6">
-            <b>Preview</b>
-            <div>
-            <iframe src="../sampleForms/joe.pdf" width="500" height="700"></iframe>
+        
+
+            <div class="row" id="navigation">
+                <div class="col-sm-4" id="return">
+                    <a href="individual-form.html" class="btn btn-info btn-block" role="button">Back to Edit Logs</a>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-info btn-block" id="email">
+                    <span class="glyphicon glyphicon-envelope"></span>  Email to Parents
+                    </button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-info btn-block" id="print">
+                    <span class="glyphicon glyphicon-print"></span>  Print
+                    </button>
+                </div>
             </div>
         </div>
+        <div class="preview col-sm-5">
+            <b>Preview</b>
+            <div id="pdf">
+            <iframe src="../sampleForms/joe.pdf" height="600px"></iframe>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
     </div>
 
-    <div class="row" id="navigation">
-        <div class="col-sm-4" id="return">
-            <a href="individual-form.html" class="btn btn-info btn-lg" role="button">Back to Edit Logs</a>
-        </div>
-        <div class="col-sm-4">
-            <button type="button" class="btn btn-info btn-lg" id="email">
-            <span class="glyphicon glyphicon-envelope"></span>  Email to Parents
-            </button>
-        </div>
-        <div class="col-sm-4">
-            <button type="button" class="btn btn-info btn-lg" id="print">
-            <span class="glyphicon glyphicon-print"></span>  Print
-            </button?
-        </div>
-    </div>
 </div>
 </body>
 <footer>

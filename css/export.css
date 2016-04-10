@@ -13,8 +13,20 @@ body, html {
 
 .selection{
     text-align: left;
+    height: 100%;
 }
 
 iframe{
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#navigation{
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+}
+
+#navigation .col-sm-4{
+    text-align: center;
 }
