@@ -1,0 +1,51 @@
+body {
+    margin: 0px;
+    background-color: #ffffff;
+}
+
+body > * {
+	font-family: Arial, Verdana, sans-serif;
+	color: black;
+    margin: 10px;
+}
+
+h1 {
+	font-family: 'Economica';
+	font-size: 3em;
+}
+
+.banner {
+    width: 100%;
+    background-color: #ad4cbd;
+    color: black;
+    margin: 0px 0px 20px 0px;
+}
+
+.banner-logo {
+	margin-left: 10px;
+	height: 80px;
+}
+
+.btn-custom, btn-custom:visited:hover:active {
+	color: white;
+	margin-bottom: 20px;
+}
+
+.btn-custom {
+	background-color: #FFA739;
+}
+
+.btn-custom:hover {
+	color: white;
+	background-color: #C56E00;
+}
+
+.btn-custom:active {
+	color: white;
+	background-color: #9B5600;
+}
+
+.col-center {
+	float: none;	
+	margin: 0 auto;
+}

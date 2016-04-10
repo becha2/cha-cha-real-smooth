@@ -35,7 +35,7 @@ function populatePage() {
  */
 function createElements(student) {
 	var div = $("<div/>", { "class": "col-md-4 col-sm-3"	});
-	var imageSource = "../icons/index/a.png" // TODO: specific image for each
+	var imageSource = "../icons/index/avatar.png" // TODO: specific image for each
 	var img = $("<img>", { "class": "img-circle center-block student-photo", "src": imageSource });
 	img.click(function() {
 		window.location.href = "individual-form.html";
