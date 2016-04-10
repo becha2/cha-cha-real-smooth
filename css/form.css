@@ -24,6 +24,16 @@
 	bottom: 0;
 }
 
+.class-info {
+	position: absolute;
+	height: 80px;
+	bottom: 0;
+}
+
+.class-subheading {
+	color: red;
+}
+
 .indiv-name {
 	font-size: 36px;
 }
@@ -70,6 +80,9 @@ body {
 	height: 150px;
 	background: url("../icons/index/c.jpg") no-repeat;
 	background-size: cover;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #dedede;
 }
 
 .parent-icon {
@@ -85,6 +98,7 @@ body {
 .food-icon {
 	background: url("../icons/food.png") no-repeat;
 	background-size: cover;
+	background-position-x: -10px;
 }
 
 .naps-icon {
