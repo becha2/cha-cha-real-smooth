@@ -1,25 +1,55 @@
-body{
-	padding: 10px;
+.form-content {
+	position: absolute;
+	display: inline-block;
+	width: 62.8%;
+	left: 200px;
+	margin-left: 32px;
+	margin-top: 32px;
 }
 .form-container {
 	position: relative;
-	width: 62.8%;
+	width: 100%;
 }
 
 .indiv-section {
 	height: 150px;
-	width: 62.8%;
 	position: relative;
 }
 
 .indiv-info {
-	height: 100px;
+	position: absolute;
+	height: 80px;
 	margin-left: 32px;
-	float: left;
-	padding-top: 25px;
+	left: 150px;
+	bottom: 0;
+}
+
+.indiv-name {
+	font-size: 36px;
+}
+
+.indiv-contact {
+	font-size: 16px;
+}
+
+body {
+	margin: 0;
+}
+
+.banner {
+	margin: 0;
+}
+.menu-sidebar {
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	background-color: #f3dbf6;
+	position: absolute;
+	margin: 0;
 }
 
 #accordion {
+	display: inline-block;
 	margin-top: 32px;
 }
 
@@ -40,7 +70,6 @@ body{
 	height: 150px;
 	background: url("../icons/index/c.jpg") no-repeat;
 	background-size: cover;
-	border-radius: 50%;
 }
 
 .parent-icon {
