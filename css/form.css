@@ -1,3 +1,10 @@
+html, body {
+	position: relative;
+	font-family: "Gill Sans MT", Verdana, Arial, sans-serif;
+	color: black;
+	background-color: #ffffff;
+}
+
 .form-content {
 	position: absolute;
 	display: inline-block;
@@ -5,6 +12,7 @@
 	left: 200px;
 	margin-left: 32px;
 	margin-top: 32px;
+	height: auto;
 }
 .form-container {
 	position: relative;
@@ -42,26 +50,47 @@
 	font-size: 16px;
 }
 
-body {
-	margin: 0;
+.banner {
+	width: 100%;
+    background-color: #ad4cbd;
+    color: black;
+    margin: 0;
 }
 
-.banner {
-	margin: 0;
+.banner-logo {
+	margin-left: 10px;
+	height: 80px;
 }
+
 .menu-sidebar {
 	display: inline-block;
 	width: 200px;
-	height: 100%;
-	background-color: #f3dbf6;
 	position: absolute;
-	margin: 0;
+}
+
+.menu-background{
+	background-color: #f3dbf6;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 200px;
+	position: fixed;
+	overflow-y: auto;
+	z-index: -1;
+}
+
+.page-container {
+	position: relative;
+	height: auto;
 }
 
 .panel-group {
 	display: inline-block;
 	width: 200px;
-	margin-bottom: 250px;
+}
+
+.panel-group .panel+.panel {
+	margin-top: 0;
 }
 
 .list-group-item {
@@ -79,12 +108,11 @@ body {
 	margin: 0 auto;
 }
 
-.btn {
-	margin: 15px 15px 20px 25px;
+.menu-btn {
 	text-align: center;
 	display: block;
-	margin: 5 auto;
-	width: 150px;
+	margin: 5px auto;
+	width: 100%;
 }
 
 .modal-content {
@@ -163,6 +191,8 @@ body {
 .diaper-icon {
 	background: url("../icons/diaper.png") no-repeat;
 	background-size: cover;
+	background-size: 90px;
+	background-position: 10px 10px;
 }
 
 .section-title {
