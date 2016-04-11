@@ -1,14 +1,82 @@
 @import "mainLayout.css";
 
-.glyphicon {
-	font-size: 24px;
+#image-container > *{
+    margin: 20px 0;
 }
 
-#image-container > *{
-	margin: 20px 0;
+.darken {
+    position: relative;
+    background: black;
+    max-height: 200px;
+    max-width: 200px;
 }
 
 .student-photo {
-	cursor: pointer;
-	margin-right: 0;
+    max-height: 200px;
+    max-width: 200px;
+    box-shadow: 0 2px 1px grey;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.darken:hover .student-photo {
+    opacity: .5;
+}
+
+.darken:hover .image-overlay {
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    width: 132px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.student-photo:hover .image-overlay {
+    display: block;
+}
+
+.glyphicon {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0px 10px;
+    color: white;
+}
+
+.glyphicon-earphone {
+    color: #39C30E;
+}
+
+.glyphicon-alert {
+    color: #E1011B;
+}
+
+.col-icon {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.header > *{
+    display: inline-block;
+}
+
+.header > h1 {
+    margin-top: 0px;
+}
+
+.header > span {
+    float: right;
 }

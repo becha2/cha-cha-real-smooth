@@ -64,6 +64,12 @@ body {
 	margin-bottom: 250px;
 }
 
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #FFA739;
+    border-color: #FFA739;
+}
+
 .list-group-item {
 	text-indent: 20px;
 }
