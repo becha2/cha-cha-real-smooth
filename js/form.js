@@ -19,4 +19,21 @@ $(function () {
 		sectionHeading.click();
 	});
 
+	$("#classA-title").click(function(){
+        $("#classA-body").collapse('show');
+        $("#classB-body").collapse('hide');
+        $("#classC-body").collapse('hide');
+    });
+
+	$("#classB-title").click(function(){
+        $("#classA-body").collapse('hide');
+        $("#classB-body").collapse('show');
+        $("#classC-body").collapse('hide');
+    });
+
+	$("#classC-title").click(function(){
+        $("#classA-body").collapse('hide');
+        $("#classB-body").collapse('hide');
+        $("#classC-body").collapse('show');
+    });
 });
