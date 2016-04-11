@@ -92,6 +92,30 @@ body {
 	display: inline-block;
 }
 
+.categories {
+	margin-bottom: 10px;
+}
+
+.participants {
+	display: inline-block;
+}
+
+.participants h4 {
+	display: inline;
+	float: left;
+}
+
+.participants .col-lg-6 {
+	display: inline;
+	float: left;
+	vertical-align: middle;
+}
+
+span .input-group-btn {
+	vertical-align: bottom;
+}
+
+
 #accordion {
 	display: inline-block;
 	margin-top: 32px;
