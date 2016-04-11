@@ -58,6 +58,31 @@ body {
 	margin: 0;
 }
 
+.panel-group {
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 250px;
+}
+
+.list-group-item {
+	text-indent: 20px;
+}
+
+.menu-buttons button {
+	margin: 30px 10px 10px 10px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.btn {
+	margin: 15px 15px 20px 25px;
+	text-align: center;
+	display: block;
+	margin: 5 auto;
+	width: 150px;
+}
+
 #accordion {
 	display: inline-block;
 	margin-top: 32px;
