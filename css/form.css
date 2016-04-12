@@ -231,8 +231,9 @@ textarea {
 
 .save-btn {
 	float: right;
-	margin: 5px 80px 5px 0;
-	height: 35px;
+	margin: 5px 50px 5px 0;
+	height: 40px;
+	line-height: 25px;
 }
 
 .search-button {

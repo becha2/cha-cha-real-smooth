@@ -9,52 +9,55 @@
 	<link rel="stylesheet" type="text/css" href="../css/export.css">
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12" id="topBar">
-            <h1>Export Logs</h1>
-        </div>
+    <div class="banner">
+        <a href="index.html"><img class="banner-logo" alt="TakeCare Logo" src="../icons/takecare-text-logo.png"/></a>
     </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" id="topBar">
+                <h1>Export Logs</h1>
+            </div>
+        </div>
 
-    <div class="row" id="main">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-5">
-            <div class="selection">
-        	    <div class="students" id="classA">
-                    <table class="table table-hover">
-                    <thead>
-                        <tr><th>Class B Students</th><th>Notes</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr class="active"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
-                        <tr><td>Mandy</td><td></td></tr>
-                        <tr><td>Kyle</td><td></td></tr>
-                        <tr class="warning"><td>Sarah</td><td>Absent</td></tr>
-                    </tbody>
-                    </table>
+        <div class="row" id="main">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+                <div class="selection">
+                    <div class="students" id="classA">
+                        <table class="table table-hover">
+                        <thead>
+                            <tr><th>Class B Students</th><th>Notes</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="active"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
+                            <tr><td>Mandy</td><td></td></tr>
+                            <tr><td>Kyle</td><td></td></tr>
+                            <tr class="warning"><td>Sarah</td><td>Absent</td></tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-default btn-block" id="select-all">Select All</button>
+                    <a href="individual-form.html" class="btn btn-info navigation col-sm-3" role="button">Back to Edit Logs</a>
+                    <div class="col-sm-1"></div>
+                    <button type="button" class="btn btn-info navigation col-sm-4" id="email">
+                        <span class="glyphicon glyphicon-envelope"></span>  Email to Parents
+                    </button>
+                    <div class="col-sm-1"></div>
+                    <button type="button" class="btn btn-info navigation col-sm-3" id="print">
+                        <span class="glyphicon glyphicon-print"></span>  Print
+                    </button>
                 </div>
-                <button type="button" class="btn btn-default btn-block" id="select-all">Select All</button>
-                <a href="individual-form.html" class="btn btn-info navigation col-sm-3" role="button">Back to Edit Logs</a>
-                <div class="col-sm-1"></div>
-                <button type="button" class="btn btn-info navigation col-sm-4" id="email">
-                    <span class="glyphicon glyphicon-envelope"></span>  Email to Parents
-                </button>
-                <div class="col-sm-1"></div>
-                <button type="button" class="btn btn-info navigation col-sm-3" id="print">
-                    <span class="glyphicon glyphicon-print"></span>  Print
-                </button>
             </div>
-        </div>
-        <div class="preview col-sm-5">
-            <b>Preview</b>
-            <div id="pdf">
-            <iframe src="../sampleForms/joe.pdf" height="600px"></iframe>
+            <div class="preview col-sm-5">
+                <b>Preview</b>
+                <div id="pdf">
+                <iframe src="../sampleForms/joe.pdf" height="600px"></iframe>
+                </div>
             </div>
+            <div class="col-sm-1"></div>
         </div>
-        <div class="col-sm-1"></div>
-    </div>
 
-</div>
+    </div>
 </body>
 <footer>
 	<script src="../Library/jquery-1.12.3.min.js"></script>
