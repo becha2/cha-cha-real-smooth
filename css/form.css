@@ -220,7 +220,7 @@ body > * {
 
 textarea {
 	padding: 10px;
-	max-width: 90%;
+	max-width: 100%;
 	display: block;
 	resize: none;
 }
@@ -232,6 +232,7 @@ textarea {
 .save-btn {
 	float: right;
 	margin: 5px 80px 5px 0;
+	height: 35px;
 }
 
 .search-button {
