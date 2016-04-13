@@ -51,22 +51,19 @@
     display: block;
 }
 
-.glyphicon {
+.student-icon {
+    display: inline;
     cursor: pointer;
-    font-size: 24px;
     margin: 0px 10px;
-    color: white;
+    font-size: 40px;
 }
 
 .glyphicon-earphone {
-    display: inline;
     color: #39C30E;
-    font-size: 40px;
 }
 
 .glyphicon-list-alt {
-    display: inline;
-    font-size: 40px;
+    color: white;
 }
 
 .col-icon {

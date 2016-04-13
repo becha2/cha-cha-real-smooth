@@ -33,13 +33,13 @@ function createElement(student) {
     var div = $("<div/>", { "class": "col-md-4 col-sm-3" });
     
     // Make the icons, put them in their own subgrid
-    var phoneIcon = ($("<span/>", { "class": "glyphicon glyphicon-earphone" }));
+    var phoneIcon = ($("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" }));
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
     // });
-    var logIcon = $("<span/>", { "class": "glyphicon glyphicon-list-alt" });
+    var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
     logIcon.click(function() {
-        window.location.href = "html/individual-form.html";
+        window.location.href = "html/form.html?class=B&type=individual";
     });
     // var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
     // incidentIcon.click(function() {
