@@ -4,21 +4,38 @@
 </div>
 <div class="modal-body">
 	<div class="categories">
-		<button type="button">Sick</button>
-		<button type="button">Injury</button>
-		<button type="button">Other</button>
+		<button type="button" class="incident-btn btn-default btn active">Sick</button>
+		<button type="button" class="incident-btn btn-default btn">Injury</button>
+		<button type="button" class="incident-btn btn-default btn">Other</button>
 	</div>
 
 	<div class="participants">
 		<!-- <div class="children-search"> -->
 		<h4>Children Involved</h4>
-			<div class="col-lg-6">
-				<div class="input-group">
-					<!-- <h4>Children Involved</h4> -->
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="search-button glyphicon glyphicon-search"></span>
-				</div><!-- /input-group -->
-				</div><!-- /.col-lg-6 -->
+			<div class="col-lg-12 search-container" style="padding: 0">
+				<div class="input-group" style="width: 100%">
+						<select multiple class="search-for" data-placeholder="Search For..">
+							<optgroup label="Class A">
+								<option>Abigail</option>
+								<option>Laura</option>
+								<option>Olivier</option>
+								<option>Rebekah</option>
+							</optgroup>
+							<optgroup label="Class B">
+								<option>Joe</option>
+								<option>Kyle</option>
+								<option>Mandy</option>
+								<option>Sarah</option>
+							</optgroup>
+							<optgroup label="Class C">
+								<option>Carl</option>
+								<option>Alice</option>
+								<option>Lisa</option>
+								<option>Bart</option>
+							</optgroup>
+						</select>
+				</div>
+			</div>
 		</div>
 
 		<div class="description">
@@ -32,3 +49,14 @@
 	<button type="button" class="btn btn-custom" data-dismiss="modal">Send to Parents</button>
 </div>
 </div>
+
+<script type="text/javascript">
+
+	$('.incident-btn').click(function(){
+		var buttons = $('.incident-btn');
+		buttons.removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.search-for').chosen({width: '100%'})
+</script>
