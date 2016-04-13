@@ -34,16 +34,16 @@ function createElement(student) {
     
     // Make the icons, put them in their own subgrid
     var phoneIcon = ($("<span/>", { "class": "glyphicon glyphicon-earphone" }));
-    phoneIcon.click(function() {
-        window.location.href = "individual-form.html";
-    });
+    // phoneIcon.click(function() {
+    //     window.location.href = "individual-form.html";
+    // });
     var logIcon = $("<span/>", { "class": "glyphicon glyphicon-list-alt" });
     logIcon.click(function() {
-        window.location.href = "individual-form.html";
+        window.location.href = "html/individual-form.html";
     });
     var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
     incidentIcon.click(function() {
-        window.location.href = "individual-form.html#incidentReport";
+        window.location.href = "html/individual-form.html#incidentReport";
     });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
@@ -52,7 +52,7 @@ function createElement(student) {
         iconContainer.append(icon);
     }
     
-    var imageSource = "../icons/index/avatar.png" // TODO: specific image for each
+    var imageSource = "icons/index/avatar.png" // TODO: specific image for each
     var img = $("<img>", { "class": "img-circle center-block student-photo", "src": imageSource });
     
     var imgContainer = $("<div/>", { "class": "img-circle center-block darken" });
