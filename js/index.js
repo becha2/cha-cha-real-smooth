@@ -41,13 +41,13 @@ function createElement(student) {
     logIcon.click(function() {
         window.location.href = "html/individual-form.html";
     });
-    var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
-    incidentIcon.click(function() {
-        window.location.href = "html/individual-form.html#incidentReport";
-    });
+    // var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
+    // incidentIcon.click(function() {
+    //     window.location.href = "html/individual-form.html#incidentReport";
+    // });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
-    var icons = [phoneIcon, logIcon, incidentIcon];
+    var icons = [phoneIcon, logIcon];
     for (icon of icons) {
         iconContainer.append(icon);
     }

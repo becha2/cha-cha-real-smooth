@@ -1,0 +1,50 @@
+
+html, body {
+	position: relative;
+	color: black;
+	margin: 0;
+}
+
+.modal-header {
+	background-color: #f3dbf6;
+}
+
+.modal-content {
+	width: 600px;
+	display: inline-block;
+}
+
+
+.categories {
+	margin-bottom: 10px;
+}
+
+.participants {
+	display: inline-block;
+}
+
+.participants h4 {
+	display: inline;
+	float: left;
+}
+
+.participants .col-lg-6 {
+	display: inline;
+	float: left;
+	vertical-align: middle;
+}
+
+.search-button {
+	position: absolute;
+	right: 10px;
+	width: 10px;
+	z-index: 10;
+	line-height: 35px;
+	top: 0;
+}
+textarea {
+	padding: 10px;
+	max-width: 100%;
+	display: block;
+	resize: none;
+}

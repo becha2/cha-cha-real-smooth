@@ -1,6 +1,9 @@
 @import "mainLayout.css";
 
-#image-container > *{
+.home-content {
+    margin: 20px;
+}
+#image-container > * {
     margin: 20px 0;
 }
 
@@ -32,7 +35,7 @@
 
 .image-overlay {
     position: absolute;
-    width: 132px;
+    width: auto;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -56,11 +59,14 @@
 }
 
 .glyphicon-earphone {
+    display: inline;
     color: #39C30E;
+    font-size: 40px;
 }
 
-.glyphicon-alert {
-    color: #E1011B;
+.glyphicon-list-alt {
+    display: inline;
+    font-size: 40px;
 }
 
 .col-icon {
@@ -79,4 +85,14 @@
 
 .header > span {
     float: right;
+}
+
+#export-btn {
+    margin-bottom: 20px;
+    width: 165px;
+}
+
+#incident-btn {
+    margin-bottom: 20px;
+    width: 165px;
 }
