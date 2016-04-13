@@ -26,6 +26,10 @@ iframe{
     padding: 6px 12px;
 }
 
-#select-all{
-    margin-bottom: 12px;
+#student-table {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
 }
