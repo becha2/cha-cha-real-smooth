@@ -135,6 +135,7 @@ html, body {
 }
 
 .section-heading {
+	cursor: pointer;
 	height: 100px;
 	position: relative;
 	box-shadow: #555555 0px 1px 4px -2px;
