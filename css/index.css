@@ -29,15 +29,6 @@
     transition: all 0.5s linear;
 }
 
-.darken:hover {
-
-    box-shadow: #ad4cbd 0 0 15px 0px;
-     -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
 .darken:hover .student-photo {
     opacity: .5;
 }
