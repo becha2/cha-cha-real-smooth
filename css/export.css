@@ -1,19 +1,42 @@
 body, html {
     height: 100%;
-    text-align: center;
 }
 
 .container-fluid{
     height: 100%;
 }
 
-#main{
-    margin-bottom: 20px;
+.export-header {
+    height: auto;
 }
 
+#topBar {
+    margin-top: 32px;
+}
+
+#topBar h1 {
+    padding: 0;
+}
+
+#main{
+    margin: 32px 0;
+}
+
+.selection-container {
+    padding: 0;
+}
 .selection{
     text-align: left;
     height: 100%;
+}
+
+.preview {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.banner {
+    margin: 0;
 }
 
 iframe{
@@ -24,6 +47,7 @@ iframe{
 .navigation{
     text-align: center;
     padding: 6px 12px;
+    width: 165px;
 }
 
 #student-table {
