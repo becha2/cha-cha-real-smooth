@@ -2,7 +2,6 @@ $(function(){
 	function getValue(varname) {
  	 		// First, we load the URL into a variable
   			var url = window.location.href;
-  			console.log(url);
   			// Next, split the url by the ?
   			var qparts = url.split("?");
   			// Check that there is a querystring, return "" if not
