@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-confirm.css" />
     <link rel="stylesheet" type="text/css" href="../css/mainLayout.css">
 	<link rel="stylesheet" type="text/css" href="../css/export.css">
 </head>
@@ -29,10 +30,10 @@
                             <tr><th>Class B Students</th><th>Notes</th></tr>
                         </thead>
                         <tbody id="student-table">
-                            <tr class="active"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
-                            <tr><td>Mandy</td><td></td></tr>
-                            <tr><td>Kyle</td><td></td></tr>
-                            <tr class="warning"><td>Sarah</td><td>Absent</td></tr>
+                            <tr class="active" id="joe"><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
+                            <tr id="mandy"><td>Mandy</td><td></td></tr>
+                            <tr id="kyle"><td>Kyle</td><td></td></tr>
+                            <tr class="warning" id="sarah"><td>Sarah</td><td>Absent</td></tr>
                         </tbody>
                         </table>
                     </div>
@@ -62,5 +63,6 @@
 <footer>
 	<script src="../Library/jquery-1.12.3.min.js"></script>
     <script src="../js/export.js"></script>
+    <script type="text/javascript" src="../js/jquery-confirm.js"></script>
 </footer>
 </html>

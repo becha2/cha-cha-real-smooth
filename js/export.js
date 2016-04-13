@@ -1,6 +1,22 @@
 $(function () {
 
     var display = ["joe"];
+    var warning = {};
+    
+    var table = $('#student-table');
+    var rows = table.children();
+    for (var r in rows) {
+        var row = rows[r];
+        if (row.nodeName=="TR"){
+            if ($(row).children()[1].innerText=='') {
+                warning[row.id] = false;
+            } else {
+                warning[row.id] = true;
+            }
+        }
+    }
+
+    console.log(warning);
 
 	$('#select-all').click(function(){
 		var table = $('#student-table');
@@ -13,20 +29,20 @@ $(function () {
     $('tr').click(function(){
         if ($(this).children()[1].innerText=="Notes"){ return; }
         if (this.className=='active'){
-            if ($(this).children()[1].innerText==''){
-                this.className='';
-                removeDisplay($(this).children()[0].innerText.toLowerCase());
+            if (warning[this.id]){
+                this.className='warning';
+                removeDisplay(this.id);
                 console.log(display);
                 updateDisplay();
             } else {
-                this.className='warning';
-                removeDisplay($(this).children()[0].innerText.toLowerCase());
+                this.className='';
+                removeDisplay(this.id);
                 console.log(display);
                 updateDisplay();
             }
         } else {
             this.className='active';
-            display.push($(this).children()[0].innerText.toLowerCase());
+            display.push(this.id);
             console.log(display);
             updateDisplay();
         }
@@ -35,7 +51,7 @@ $(function () {
     function updateDisplay(){
         if (display.length == 0){
             var row = $('#student-table').children()[0];
-            var firstName = $(row).children()[0].innerText.toLowerCase();
+            var firstName = row.id;
             display.push(firstName);
         }
         var goalSrc = "../sampleForms/" + display[display.length-1] +  ".pdf";
@@ -57,6 +73,35 @@ $(function () {
         }
     }
 
-});
+    $('#print').click(function () { // print confirmation popup
+        console.log("print clicked");
+        $.confirm({
+            title: 'Print',
+            content: getWarningMessage(),
+            confirmButton: 'Continue to Print',
+            cancelButton: 'Return to Export Screen',
+            confirmButtonClass: 'btn-primary',
+            icon: 'fa fa-info',
+            confirm: function () {
+                alert('Forms printed successfully');
+            }
+        });
+    });
 
+    function getWarningMessage(){
+        var warn = "There are warnings for:\n";
+        Object.keys(warning).forEach(function(key,index) {
+            if (warning[key]){
+                warn += ("- " + key.slice(0,1).toUpperCase() + key.slice(1) + "\n");
+            }
+        });
+        console.log(warn);
+        console.log("kk"+warn.slice(-2)+"kk");
+        if (warn.slice(-2)!=":\n") {
+            return (warn.slice(0,-2) + ". Do you want to continue anyway?");
+        } else {
+            return "Are you sure you want to print?";
+        }
+    }
+});
 
