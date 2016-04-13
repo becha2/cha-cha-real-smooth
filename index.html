@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/incident-report.css"/>
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 
@@ -13,15 +14,24 @@
     <div class="banner">
         <a href="index.html"><img class="banner-logo" alt="TakeCare Logo" src="icons/takecare-text-logo.png"/></a>
     </div>
+    <div class="home-content">
     <div class="header">
         <h1>Class B</h1>
         <span>
            <a href="html/class-form.html?class=B" class="btn btn-custom" role="button" alt="Whole Class Update">Whole Class Update</a>
+           <a data-toggle="modal" href="html/incident-report.html" data-target="#incidentReport" id="incident-btn" class="btn btn-danger" role="button" alt="Whole Class Update">Add Incident</a>
            <a href="html/export.html" id="export-btn" class="btn btn-default" role="button" alt="Whole Class Update">Export Forms</a>
         </span>
     </div>
     
     <div id="image-container"></div>
+    <div class="modal fade" id="incidentReport" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
