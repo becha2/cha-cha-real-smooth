@@ -118,6 +118,10 @@ body > * {
 	width: 100%;
 }
 
+.modal-header {
+	background-color: #f3dbf6;
+}
+
 .modal-content {
 	width: 600px;
 	display: inline-block;
@@ -234,6 +238,7 @@ textarea {
 	margin: 5px 50px 5px 0;
 	height: 40px;
 	line-height: 25px;
+	background-color: #FFA739;
 }
 
 .search-button {

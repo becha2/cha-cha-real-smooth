@@ -27,6 +27,11 @@ h1 {
 	height: 80px;
 }
 
+#export-btn {
+	margin-bottom: 20px;
+	width: 165px;
+}
+
 .btn-custom, btn-custom:visited:hover:active {
 	color: white;
 	margin-bottom: 20px;

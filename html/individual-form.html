@@ -22,9 +22,10 @@
 	</div>
 	<div id="classA-body" class="panel-collapse collapse">
 		<ul class="list-group">
-          <li class="list-group-item"><a href="individual-form.html">Alice</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Ex-crush</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Current crush</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=A">Abigail</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=A">Laura</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=A">Olivier</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=A">Rebekah</a></li>
         </ul>
 	</div>
 </div>
@@ -39,9 +40,10 @@
 	</div>
 	<div id="classB-body" class="panel-collapse collapse">
 		<ul class="list-group">
-          <li class="list-group-item"><a href="individual-form.html">Brendon</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Ex-crush</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Current crush</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=B">Joe</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=B">Kyle</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=B">Mandy</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=B">Sarah</a></li>
         </ul>
 	</div>
 	<!-- <div id="class-expand" class="class-body">Mandy</div> -->
@@ -56,9 +58,10 @@
 	</div>
 	<div id="classC-body" class="panel-collapse collapse">
 		<ul class="list-group">
-          <li class="list-group-item"><a href="individual-form.html">Carl</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Ex-crush</a></li>
-          <li class="list-group-item"><a href="individual-form.html">Current crush</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=C">Carl</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=C">Alice</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=C">Lisa</a></li>
+          <li class="list-group-item"><a href="individual-form.html?class=C">Bart</a></li>
         </ul>
 	</div>
 </div>
@@ -176,66 +179,10 @@
 <div class="menu-background"></div>
 </body>
 <footer>
-
-
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="../library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script src="../library/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	<script src="../js/form.js"></script>
-
-
-	<script type="text/javascript">
-		function getValue(varname) {
- 	 		// First, we load the URL into a variable
-  			var url = window.location.href;
-  			// Next, split the url by the ?
-  			var qparts = url.split("?");
-  			// Check that there is a querystring, return "" if not
-  			if (qparts.length == 0) { return ""; }
-		  	// Then find the querystring, everything after the ?
-  			var query = qparts[1];
-  			// Split the query string into variables (separates by &s)
-  			var vars = query.split("&");
-  			// Initialize the value with "" as default
-  			var value = "";
-
-  			// Iterate through vars, checking each one for varname
-  			for (i=0;i<vars.length;i++) {
-    			// Split the variable by =, which splits name and value
-    			var parts = vars[i].split("=");
-       			// Check if the correct variable
-    			if (parts[0] == varname) {
-      				// Load value into variable
-      				value = parts[1];
-
-      				// End the loop
-      				break;
-    			}
-  			}
-  		// Convert escape code
-  		value = unescape(value);
-		// Convert "+"s to " "s
-  		value.replace(/\+/g," ");
-  		// Return the value
-  		return value;
-	}
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		try {
-			var openClass = getValue("class");
-			if (openClass == "A") { $('#classA-body').collapse('show'); }
-			else if (openClass == "B") { $('#classB-body').collapse('show'); }
-			else if (openClass == "C") { $('#classC-body').collapse('show'); }
-			else {
-				console.log("invalid class");
-			}
-		}
-		catch(err) {
-			$('#classB-body').collapse('show');
-		}
-			// $('#classB-body').collapse('show');
-		});
-	</script>
+	<script src="../js/menu.js"></script>
 </footer>
 </html>
