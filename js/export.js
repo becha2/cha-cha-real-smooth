@@ -8,7 +8,7 @@ $(function () {
     for (var r in rows) {
         var row = rows[r];
         if (row.nodeName=="TR"){
-            if ($(row).children()[1].innerText=='') {
+            if ($(row).children()[2].innerText=='') {
                 warning[row.id] = false;
             } else {
                 warning[row.id] = true;
@@ -17,16 +17,21 @@ $(function () {
     }
 
 
-	$('#select-all').click(function(){
+	$('#checkAll').click(function(){
+        var isChecked = $(this).prop('checked');
 		var table = $('#student-table');
         var rows = table.children();
-        for (var r in rows){
-            rows[r].className = "active";
+        for (var r = 0; r < rows.length; r++){
+            if (isChecked)
+                rows[r].className = "active";
+            else
+                rows[r].className = warning[rows[r].id] ? 'warning' : '';
+            $(rows[r]).find('input:checkbox').prop('checked', isChecked);
         }
 	});
 
     $('tr').click(function(){
-        if ($(this).children()[1].innerText=="Notes"){ return; }
+        if ($(this).children()[2].innerText=="Notes"){ return; }
         if (this.className=='active'){
             if (warning[this.id]){
                 this.className='warning';
@@ -45,6 +50,10 @@ $(function () {
             console.log(display);
             updateDisplay();
         }
+        var shouldBeChecked = this.className == 'active';
+        $(this).find('input:checkbox').prop('checked', shouldBeChecked);
+        if (!shouldBeChecked)
+            $('#checkAll').prop('checked', false);
     });
 
     function updateDisplay(){
