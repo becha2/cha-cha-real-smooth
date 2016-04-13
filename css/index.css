@@ -6,6 +6,10 @@
 #image-container > * {
     margin: 20px 0;
 }
+.indiv-container {
+    display: inline-block;
+    width: 25%;
+}
 
 .darken {
     position: relative;
@@ -25,6 +29,15 @@
     transition: all 0.5s linear;
 }
 
+.darken:hover {
+
+    box-shadow: #ad4cbd 0 0 15px 0px;
+     -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
 .darken:hover .student-photo {
     opacity: .5;
 }
@@ -58,18 +71,28 @@
     font-size: 40px;
 }
 
+.student-name {
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
 .glyphicon-earphone {
     color: #39C30E;
 }
 
 .glyphicon-list-alt {
-    color: white;
+    color: #f5f5f5;
 }
 
 .col-icon {
     display: inline-block;
     vertical-align: middle;
     float: none;
+}
+.header {
+    height: 100px;
 }
 
 .header > *{
@@ -93,3 +116,4 @@
     margin-bottom: 20px;
     width: 165px;
 }
+

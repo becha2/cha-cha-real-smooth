@@ -11,13 +11,13 @@ function populatePage() {
 
     // TODO: Acquire list called students from some data structure; divs customized for each
     var classSize = students.length;
-    var numRows = classSize / 2;  // TODO: num columns on desktop, mobile
+    var numRows = classSize / 4;  // TODO: num columns on desktop, mobile
     var maxCols = classSize / numRows;
     
     var numCols = 0;
     var rowDiv = $("<div/>", { "class": "row" });
     for (var i = 0; i < classSize; i++) {
-        var div  = createElement(null);
+        var div  = createElement(students[i]);
         rowDiv.append(div);
         numCols++;
         if (numCols === maxCols || i === classSize - 1) {
@@ -32,10 +32,13 @@ function populatePage() {
  * Creates and returns the selectable element for a particular student entry
  */
 function createElement(student) {
-    var div = $("<div/>", { "class": "col-md-6 col-sm-6" });
+    var div = $("<div/>", { "class": "indiv-container" });
     
     // Make the icons, put them in their own subgrid
-    var phoneIcon = ($("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" }));
+    var name = $("<div/>", { "class": "student-name"});
+    name.text(student);
+
+    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" });
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
     // });
@@ -49,6 +52,7 @@ function createElement(student) {
     // });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
+    iconContainer.append(name);
     var icons = [phoneIcon, logIcon];
     for (icon of icons) {
         iconContainer.append(icon);
