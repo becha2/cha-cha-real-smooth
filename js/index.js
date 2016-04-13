@@ -7,9 +7,11 @@
  * Populate the body of the page with relevant links and options
  */
 function populatePage() {
+    var students = ["Joe", "Mandy", "Kyle", "Sarah"];
+
     // TODO: Acquire list called students from some data structure; divs customized for each
-    var classSize = 12; // TODO: actually students.length
-    var numRows = classSize / 3;  // TODO: num columns on desktop, mobile
+    var classSize = students.length;
+    var numRows = classSize / 2;  // TODO: num columns on desktop, mobile
     var maxCols = classSize / numRows;
     
     var numCols = 0;
@@ -30,7 +32,7 @@ function populatePage() {
  * Creates and returns the selectable element for a particular student entry
  */
 function createElement(student) {
-    var div = $("<div/>", { "class": "col-md-4 col-sm-3" });
+    var div = $("<div/>", { "class": "col-md-6 col-sm-6" });
     
     // Make the icons, put them in their own subgrid
     var phoneIcon = ($("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" }));
@@ -51,6 +53,7 @@ function createElement(student) {
     for (icon of icons) {
         iconContainer.append(icon);
     }
+
     
     var imageSource = "icons/index/avatar.png" // TODO: specific image for each
     var img = $("<img>", { "class": "img-circle center-block student-photo", "src": imageSource });
