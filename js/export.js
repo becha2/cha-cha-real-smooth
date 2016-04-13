@@ -16,7 +16,6 @@ $(function () {
         }
     }
 
-    console.log(warning);
 
 	$('#select-all').click(function(){
 		var table = $('#student-table');
@@ -74,33 +73,44 @@ $(function () {
     }
 
     $('#print').click(function () { // print confirmation popup
-        console.log("print clicked");
         $.confirm({
             title: 'Print',
-            content: getWarningMessage(),
+            content: getWarningMessage("print"),
             confirmButton: 'Continue to Print',
             cancelButton: 'Return to Export Screen',
-            confirmButtonClass: 'btn-primary',
+            confirmButtonClass: 'btn-custom',
             icon: 'fa fa-info',
             confirm: function () {
-                alert('Forms printed successfully');
+                alert('Logs printed successfully');
             }
         });
     });
 
-    function getWarningMessage(){
+    $('#email').click(function (){
+        $.confirm({
+            title: 'Email',
+            content: getWarningMessage("email"),
+            confirmButton: 'Send Email to Parents',
+            cancelButton: 'Return to Export Screen',
+            confirmButtonClass: 'btn-custom',
+            confirm: function () {
+                alert('Logs emailed successfully');
+            }
+        });
+    });
+            
+
+    function getWarningMessage(method){
         var warn = "There are warnings for:\n";
         Object.keys(warning).forEach(function(key,index) {
             if (warning[key]){
                 warn += ("- " + key.slice(0,1).toUpperCase() + key.slice(1) + "\n");
             }
         });
-        console.log(warn);
-        console.log("kk"+warn.slice(-2)+"kk");
         if (warn.slice(-2)!=":\n") {
-            return (warn.slice(0,-2) + ". Do you want to continue anyway?");
+            return (warn.slice(0,-1) + ". Do you want to continue anyway?");
         } else {
-            return "Are you sure you want to print?";
+            return "Are you sure you want to "+method+" ?";
         }
     }
 });
