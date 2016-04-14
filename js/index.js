@@ -46,7 +46,7 @@ function createElement(student) {
     //     window.location.href = "individual-form.html";
     // });
     phoneIcon.hover(function() {
-        options.text("View Contact Info");
+        options.text("Contact Info");
     }, function() {
         options.text("")
     });
@@ -56,7 +56,7 @@ function createElement(student) {
         window.location.href = "html/form.html?class=B&type=individual";
     });
     logIcon.hover(function() {
-        options.text("Log Daily Info");
+        options.text("Daily Log");
     }, function() {
         options.text("")
     });
