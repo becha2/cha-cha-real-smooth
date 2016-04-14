@@ -185,6 +185,13 @@ html, body {
 	background-position: 10px 10px;
 }
 
+.ellipsis-icon {
+	background: url("../icons/ellipsis.png") no-repeat;
+	background-size: cover;
+	background-size: 85px;
+	background-position: 10px 10px;
+}
+
 .section-title {
 	float: left;
 	height: 100px;
@@ -219,4 +226,19 @@ textarea {
 .save-btn {
 	float: right;
 	margin: 10px 0;
+}
+
+#save-dialog {
+    display: none;
+    padding: 10 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    padding: 5px 10px;
+    color: white;
+    background-color: #FFA739;
+    z-index: 500;
 }

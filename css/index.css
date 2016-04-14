@@ -22,11 +22,11 @@
     max-height: 200px;
     max-width: 200px;
     box-shadow: 0 2px 1px grey;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
 .darken:hover .student-photo {
@@ -44,11 +44,6 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     display: none;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -ms-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
 }
 
 .student-photo:hover .image-overlay {

@@ -13,6 +13,9 @@ $(function () {
 	$('.save-btn').click(function(){
 		var sectionHeading = $(this).parent().prev();
 		sectionHeading.click();
+        $("#save-dialog").fadeIn("slow").delay(2000).fadeOut();
+        var time = new Date($.now());
+        $(".last-saved-time").first().text(time.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}));
 	});
 
 	$("#classA-title").click(function(){
