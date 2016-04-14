@@ -63,10 +63,18 @@
 }
 
 .student-name {
-    color: #f5f5f5;
+    color: black;
     text-align: center;
     margin-bottom: 10px;
     font-size: 26px;
+}
+
+.student-prompt {
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 14px;
+    font-size: 14px;
 }
 
 .glyphicon-earphone {

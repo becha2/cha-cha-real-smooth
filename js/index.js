@@ -37,14 +37,28 @@ function createElement(student) {
     // Make the icons, put them in their own subgrid
     var name = $("<div/>", { "class": "student-name"});
     name.text(student);
+    
+    var options = $("<div/>", { "class": "student-prompt" });
+    options.text("");
 
     var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" });
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
     // });
+    phoneIcon.hover(function() {
+        options.text("View Contact Info");
+    }, function() {
+        options.text("")
+    });
+    
     var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
     logIcon.click(function() {
         window.location.href = "html/form.html?class=B&type=individual";
+    });
+    logIcon.hover(function() {
+        options.text("Log Daily Info");
+    }, function() {
+        options.text("")
     });
     // var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
     // incidentIcon.click(function() {
@@ -52,7 +66,7 @@ function createElement(student) {
     // });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
-    iconContainer.append(name);
+    iconContainer.append(options);
     var icons = [phoneIcon, logIcon];
     for (icon of icons) {
         iconContainer.append(icon);
@@ -67,6 +81,7 @@ function createElement(student) {
     imgContainer.append(iconContainer);
     
     div.append(imgContainer);
+    div.append(name);
     return div;
 }
 

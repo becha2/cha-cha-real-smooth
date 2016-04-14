@@ -21,7 +21,7 @@ body > * {
 	height: 80px;
 }
 
-.btn-custom, btn-custom:visited:hover:active {
+.btn-custom, .btn-custom:visited:hover:active {
 	color: white;
 	margin-bottom: 20px;
 }
