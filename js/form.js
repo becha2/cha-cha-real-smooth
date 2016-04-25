@@ -5,10 +5,10 @@ $(function () {
 		icon.toggleClass('glyphicon-menu-down glyphicon-menu-right');
 	});
 
-	$('#accordion').accordion({
-		active: false,
-		collapsible: true
-	});
+	  $('#accordion .section-heading').click(function() {
+	      $(this).next().toggle('slow');
+	      return false;
+	  }).next().show();
 
 	$('.save-btn').click(function(){
 		var sectionHeading = $(this).parent().prev();

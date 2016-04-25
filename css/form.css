@@ -142,9 +142,12 @@ html, body {
 }
 
 .section-icon {
-	width: 100px;
-	height: 100px;
-	float: left;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
 }
 
 .indiv-icon {
@@ -181,22 +184,19 @@ html, body {
 .diaper-icon {
 	background: url("../icons/diaper.png") no-repeat;
 	background-size: cover;
-	background-size: 90px;
-	background-position: 10px 10px;
 }
 
 .ellipsis-icon {
 	background: url("../icons/ellipsis.png") no-repeat;
 	background-size: cover;
-	background-size: 85px;
-	background-position: 10px 10px;
 }
 
 .section-title {
-	float: left;
+	position: absolute;
 	height: 100px;
 	line-height: 100px;
-	margin-left: 32px;
+	margin-left: 100px;
+	font-size: 24px;
 }
 
 .glyphicon {
@@ -207,6 +207,7 @@ html, body {
 }
 
 .section-body {
+	height: 200px;
 	padding: 20px 20px 0 20px;
 	width: 100%;
 	box-shadow: #555555 0px 1px 4px -2px;
