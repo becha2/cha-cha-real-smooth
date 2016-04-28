@@ -191,3 +191,7 @@ textarea {
     background-color: #D5602E;
     z-index: 500;
 }
+
+#incidentReport {
+	overflow: auto;
+}
