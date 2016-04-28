@@ -11,8 +11,8 @@ body > * {
 
 .banner {
     width: 100%;
-    background-color: #ad4cbd;
-    color: black;
+    background-color: #562A72;
+    color: #8B729C;
     margin: 0px 0px 20px 0px;
 }
 
@@ -27,7 +27,7 @@ body > * {
 }
 
 .btn-custom {
-	background-color: #FFA739;
+	background-color: #D5602E;
 }
 
 .btn-custom:hover {

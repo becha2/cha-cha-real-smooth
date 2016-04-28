@@ -1,3 +1,5 @@
+@import "mainLayout.css";
+
 html, body {
 	position: relative;
 	color: black;
@@ -55,13 +57,6 @@ html, body {
 
 .indiv-contact {
 	font-size: 16px;
-}
-
-.banner {
-	width: 100%;
-    background-color: #ad4cbd;
-    color: black;
-    margin: 0;
 }
 
 .menu-sidebar {
@@ -240,6 +235,6 @@ textarea {
     position: fixed;
     padding: 5px 10px;
     color: white;
-    background-color: #FFA739;
+    background-color: #D5602E;
     z-index: 500;
 }
