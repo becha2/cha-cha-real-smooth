@@ -97,8 +97,9 @@
     margin-top: 0px;
 }
 
-.header > span {
+.banner > span {
     float: right;
+    margin: auto;
 }
 
 #export-btn {
