@@ -9,8 +9,10 @@ html, body {
 .form-content {
 	position: absolute;
 	display: inline-block;
-	margin: 32px auto auto auto;
+	margin: auto;
+	padding: 32px;
 	width: 50%;
+	min-width: 550px;
 	right: 0;
 	left: 200px;
 	height: auto;
