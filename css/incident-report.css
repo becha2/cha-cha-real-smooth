@@ -1,11 +1,10 @@
-
 html, body {
 	position: relative;
 	margin: 0;
 }
 
 .modal-header {
-	background-color: #f3dbf6;
+	background-color: #562A72;
 }
 
 .modal-content {
@@ -16,6 +15,17 @@ html, body {
 
 .categories {
 	margin-bottom: 10px;
+}
+
+.btn-default.active:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+
+.btn-default:active:focus{
+	outline: none;
+	box-shadow: none;
 }
 
 .participants {

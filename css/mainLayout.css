@@ -11,9 +11,8 @@ body > * {
 
 .banner {
     width: 100%;
-    background-color: #ad4cbd;
-    color: black;
-    margin: 0px 0px 20px 0px;
+    background-color: #562A72;
+    color: #8B729C;
 }
 
 .banner-logo {
@@ -27,12 +26,13 @@ body > * {
 }
 
 .btn-custom {
-	background-color: #FFA739;
+	background-color: #e7d3f3;
+	color: #1C012D;
 }
 
 .btn-custom:hover {
 	color: white;
-	background-color: #C56E00;
+	background-color: #7E5C94;
 }
 
 .btn-custom:active {

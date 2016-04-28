@@ -1,3 +1,5 @@
+@import "mainLayout.css";
+
 html, body {
 	position: relative;
 	color: black;
@@ -20,21 +22,21 @@ html, body {
 }
 
 .indiv-section {
-	height: 80px;
+	height: 90px;
 	position: relative;
 }
 
 .indiv-info {
 	position: absolute;
 	margin-left: 32px;
-	left: 100px;
+	left: 90px;
 	bottom: 0;
 	width: 100%;
 }
 
 .indiv-info .last-saved {
 	position: absolute;
-	right: 182px;
+	right: 125px;
 }
 
 .class-info {
@@ -45,7 +47,7 @@ html, body {
 }
 
 .class-subheading {
-	color: red;
+	color: #7e5c94;
 }
 
 .indiv-name {
@@ -54,13 +56,6 @@ html, body {
 
 .indiv-contact {
 	font-size: 16px;
-}
-
-.banner {
-	width: 100%;
-    background-color: #ad4cbd;
-    color: black;
-    margin: 0;
 }
 
 .last-saved {
@@ -78,28 +73,34 @@ html, body {
 
 .section-heading {
 	cursor: pointer;
-	height: 100px;
+	height: 53px;
 	position: relative;
-	box-shadow: #555555 0px 1px 4px -2px;
+	background-color: #ebebeb;
+	border-color: #d6d6d6;
+	border-width: 1px;
+	border-style: solid;
+	margin-top: 5px;
 }
 
 .section-icon {
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 30px;
 	margin: auto;
+	margin-left: 10px;
 	top: 0;
 	bottom: 0;
 }
 
 .indiv-icon {
-	width: 80px;
-	height: 80px;
+	width: 90px;
+	height: 90px;
 	background: url("../icons/index/c.jpg") no-repeat;
 	background-size: cover;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #dedede;
+	margin: 0;
 }
 
 .parent-icon {
@@ -115,7 +116,7 @@ html, body {
 .food-icon {
 	background: url("../icons/food.png") no-repeat;
 	background-size: cover;
-	background-position-x: -10px;
+	background-position-x: -4px;
 }
 
 .naps-icon {
@@ -126,6 +127,7 @@ html, body {
 .diaper-icon {
 	background: url("../icons/diaper.png") no-repeat;
 	background-size: cover;
+	background-position-x: -2px;
 }
 
 .ellipsis-icon {
@@ -135,10 +137,9 @@ html, body {
 
 .section-title {
 	position: absolute;
-	height: 100px;
-	line-height: 100px;
-	margin-left: 100px;
-	font-size: 24px;
+	line-height: 53px;
+	margin-left: 53px;
+	font-size: 22px;
 }
 
 .glyphicon {
@@ -146,13 +147,16 @@ html, body {
 	position: absolute;
 	right: 50px;
 	top: 50%;
+	transform: translateY(-50%);
 }
 
 .section-body {
 	height: 200px;
 	padding: 20px 20px 0 20px;
 	width: 100%;
-	box-shadow: #555555 0px 1px 4px -2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ebebeb;
 }
 
 textarea {
@@ -182,6 +186,6 @@ textarea {
     position: fixed;
     padding: 5px 10px;
     color: white;
-    background-color: #FFA739;
+    background-color: #D5602E;
     z-index: 500;
 }
