@@ -7,10 +7,10 @@ html, body {
 .form-content {
 	position: absolute;
 	display: inline-block;
-	right: 32px;
+	margin: 32px auto auto auto;
+	width: 50%;
+	right: 0;
 	left: 200px;
-	margin-left: 32px;
-	margin-top: 32px;
 	height: auto;
 	overflow-x: hidden;
 }
@@ -20,15 +20,14 @@ html, body {
 }
 
 .indiv-section {
-	height: 150px;
+	height: 80px;
 	position: relative;
 }
 
 .indiv-info {
 	position: absolute;
-	height: 80px;
 	margin-left: 32px;
-	left: 150px;
+	left: 100px;
 	bottom: 0;
 	width: 100%;
 }
@@ -64,59 +63,6 @@ html, body {
     margin: 0;
 }
 
-.menu-sidebar {
-	display: inline-block;
-	width: 200px;
-	position: absolute;
-}
-
-.menu-background{
-	background-color: #f3dbf6;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	width: 200px;
-	position: fixed;
-	overflow-y: auto;
-	z-index: -1;
-}
-
-.page-container {
-	position: relative;
-	height: auto;
-}
-
-.panel-group {
-	display: inline-block;
-	width: 200px;
-}
-
-.panel-group .panel+.panel {
-	margin-top: 0;
-}
-
-.list-group-item {
-	text-indent: 20px;
-}
-
-.list-group-item a {
-	color: black;
-}
-
-.menu-buttons button {
-	margin: 10px 10px 10px 10px;
-	text-align: center;
-	display: block;
-	margin: 0 auto;
-}
-
-.menu-btn {
-	text-align: center;
-	display: block;
-	margin: 5px auto;
-	width: 100%;
-}
-
 .last-saved {
 	float: right;
 }
@@ -124,10 +70,6 @@ html, body {
 .last-saved-time {
 	font-style: italic;
 }
-.apply-btn {
-	background-color: #FFA739;
-}
-
 
 #accordion {
 	display: inline-block;
@@ -151,8 +93,8 @@ html, body {
 }
 
 .indiv-icon {
-	width: 150px;
-	height: 150px;
+	width: 80px;
+	height: 80px;
 	background: url("../icons/index/c.jpg") no-repeat;
 	background-size: cover;
 	border-style: solid;

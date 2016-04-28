@@ -1,0 +1,48 @@
+
+.menu-sidebar {
+	display: inline-block;
+	width: 200px;
+	position: absolute;
+}
+
+.menu-background{
+	background-color: #f3dbf6;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 200px;
+	position: fixed;
+	overflow-y: auto;
+	z-index: -1;
+}
+
+.panel-group {
+	display: inline-block;
+	width: 200px;
+}
+
+.panel-group .panel+.panel {
+	margin-top: 0;
+}
+
+.list-group-item {
+	text-indent: 20px;
+}
+
+.list-group-item a {
+	color: black;
+}
+
+.menu-buttons button {
+	margin: 10px 10px 10px 10px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.menu-btn {
+	text-align: center;
+	display: block;
+	margin: 5px auto;
+	width: 100%;
+}
