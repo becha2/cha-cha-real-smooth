@@ -1,3 +1,7 @@
+#incidentReport {
+	overflow: auto;
+}
+
 html, body {
 	position: relative;
 	margin: 0;
@@ -5,11 +9,13 @@ html, body {
 
 .modal-header {
 	background-color: #562A72;
+	color: #e7d3f3;
 }
 
 .modal-content {
 	width: 600px;
 	display: inline-block;
+	color: #393939;
 }
 
 
