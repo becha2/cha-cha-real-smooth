@@ -12,8 +12,13 @@
 </head>
 
 <body>
-	<div class="banner">
+    <div class="banner">
         <a href="../index.html"><img class="banner-logo" alt="TakeCare Logo" src="../icons/takecare-text-logo.png"/></a>
+        <span class="banner-button-wrapper">
+           <a href="form.html?class=B&type=class" class="btn btn-banner" id="class-log-btn" role="button" alt="Whole Class Log">CLASS LOG</a>
+           <a href="export.html" id="export-btn" class="btn btn-banner" role="button" alt="Whole Class Update">EXPORT</a>
+           <a data-toggle="modal" href="partials/incident-report.html" data-target="#incidentReport" id="incident-btn" class="btn btn-banner btn-incident" role="button" alt="Whole Class Update">+INCIDENT</a>
+        </span>
     </div>
 
     <div class="menu-sidebar">
@@ -66,22 +71,16 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="menu-buttons">
-			<a type="button" class="menu-btn btn btn-danger" href="partials/incident-report.html" data-toggle="modal" data-target="#incidentReport">Add Incident</a>
-			<a href="export.html" class="menu-btn btn btn-default" role="button">Export Forms</a>
-		</div>
-
-		<div class="modal fade" id="incidentReport" role="dialog">
+	</div>
+    
+    <div class="modal fade" id="incidentReport" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content"></div>
 			</div>
-		</div>
 	</div>
 	
-<div class="menu-background"></div>
-
-	<div class="form-content"></div>
+    <div class="menu-background"></div>
+    <div class="form-content"></div>
     <div id="save-dialog">Information saved.</div>
 </body>
 <footer>

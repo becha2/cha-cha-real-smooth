@@ -9,24 +9,31 @@
 .indiv-container {
     display: inline-block;
     width: 25%;
+    height: 220px;
+    border: 1px solid black;
 }
 
 .darken {
     position: relative;
     background: black;
-    max-height: 200px;
-    max-width: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.student-photo-container {
+    margin-top: 10px;
 }
 
 .student-photo {
-    max-height: 200px;
-    max-width: 200px;
+    height: 150px;
+    width: 150px;
     box-shadow: 0 2px 1px grey;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
+    border: 1px solid black;
 }
 
 .darken:hover .student-photo {
@@ -101,7 +108,7 @@
     margin: auto;
 }
 
-#export-btn {
+/*#export-btn {
     margin-bottom: 20px;
     width: 165px;
 }
@@ -113,5 +120,5 @@
 
 #class-log-btn {
     width: 165px;
-}
+}*/
 

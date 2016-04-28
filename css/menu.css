@@ -6,7 +6,7 @@
 }
 
 .menu-background{
-	background-color: #f3dbf6;
+	background-color: #7e5c94;
 	top: 0;
 	bottom: 0;
 	margin: auto;
@@ -23,6 +23,13 @@
 
 .panel-group .panel+.panel {
 	margin-top: 0;
+}
+
+.menu-sidebar-heading {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background-color: #7e5c94;
 }
 
 .list-group-item {

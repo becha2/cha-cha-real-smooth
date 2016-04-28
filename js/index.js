@@ -39,7 +39,7 @@ function createElement(student) {
     name.text(student);
     
     var options = $("<div/>", { "class": "student-prompt" });
-    options.text("");
+    options.text("Choose an Option");
 
     var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" });
     // phoneIcon.click(function() {
@@ -48,7 +48,7 @@ function createElement(student) {
     phoneIcon.hover(function() {
         options.text("Contact Info");
     }, function() {
-        options.text("")
+        options.text("Choose an Option");
     });
     
     var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
@@ -58,7 +58,7 @@ function createElement(student) {
     logIcon.hover(function() {
         options.text("Daily Log");
     }, function() {
-        options.text("")
+        options.text("Choose an Option");
     });
     // var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
     // incidentIcon.click(function() {
@@ -73,10 +73,10 @@ function createElement(student) {
     }
 
     
-    var imageSource = "icons/index/avatar.png" // TODO: specific image for each
-    var img = $("<img>", { "class": "img-circle center-block student-photo", "src": imageSource });
+    var imageSource = "icons/index/avatar.jpg" // TODO: specific image for each
+    var img = $("<img>", { "class": "center-block student-photo", "src": imageSource });
     
-    var imgContainer = $("<div/>", { "class": "img-circle center-block darken" });
+    var imgContainer = $("<div/>", { "class": "center-block student-photo-container darken" });
     imgContainer.append(img);
     imgContainer.append(iconContainer);
     

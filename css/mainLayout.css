@@ -9,7 +9,10 @@ body > * {
 	color: #393939;
 }
 
+
+/* Banner properties */
 .banner {
+    position: relative;
     width: 100%;
     background-color: #562A72;
     color: #8B729C;
@@ -20,6 +23,61 @@ body > * {
 	height: 80px;
 }
 
+.banner-button-wrapper{
+    position: absolute;
+    right: 20px;
+    top: 25%
+}
+
+.btn-banner, .btn-incident {
+    font-size: 18px;
+    margin: auto auto;
+    width: 165px;
+}
+
+.btn-banner, .btn-banner:visited:hover:active {
+    color: #947EA2;
+}
+
+.btn-banner {
+    background-color: #562A72;
+}
+
+.btn-banner:visited {
+    background-color: #562A72;
+    color: #947EA2;
+}
+
+.btn-banner:hover {
+    background-color: #7E5C94;
+    color: white;
+}
+
+.btn-banner:active {
+    background-color: #6b4f7d;
+    color: white;
+}
+
+.btn-incident, .btn-incident:visited {
+    background-color: #FB7706;
+    color: white;
+}
+
+.btn-incident:visited {
+    background-color: #FB7706;
+    color: white;
+}
+
+.btn-incident:hover {
+    background-color: #ED5C1E;
+}
+
+.btn-incident:active {
+    background-color: #b3400f;
+    color: white;
+}
+
+/* Buttons and other misc. */
 .btn-custom, .btn-custom:visited:hover:active {
 	color: white;
 	margin-bottom: 20px;
@@ -37,7 +95,7 @@ body > * {
 
 .btn-custom:active {
 	color: white;
-	background-color: #9B5600;
+	background-color: #5f456e;
 }
 
 .col-center {
