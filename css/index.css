@@ -1,13 +1,19 @@
 @import "mainLayout.css";
 
 .home-content {
-    margin: 20px;
+    position: absolute;
+	display: inline-block;
+	margin: auto;
+	padding: 32px;
+	width: 70%;
+    left: 15%;
+	min-width: 550px;
+	height: auto;
 }
 #image-container > * {
     margin: 20px 0;
 }
 .indiv-container {
-    display: inline-block;
     height: 220px;
     width: 175px;
     border: 1px solid #cecece;
