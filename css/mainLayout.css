@@ -1,7 +1,7 @@
 body {
     margin: 0px;
 	font-family: "Gill Sans MT", Verdana, Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #ebebeb;
 }
 
 body > * {
@@ -56,6 +56,11 @@ body > * {
 .btn-banner:active {
     background-color: #6b4f7d;
     color: white;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+	outline: none;
+	color: white;
 }
 
 .btn-incident, .btn-incident:visited {

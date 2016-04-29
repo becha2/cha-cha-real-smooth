@@ -2,7 +2,7 @@
 
 html, body {
 	position: relative;
-	color: black;
+	color: #393939;
 	margin: 0;
 }
 
@@ -17,6 +17,8 @@ html, body {
 	left: 200px;
 	height: auto;
 	overflow-x: hidden;
+	background-color: #fff;
+	box-shadow: 0 0 15px -5px #999999;
 }
 .form-container {
 	position: relative;
@@ -45,7 +47,6 @@ html, body {
 	width: 100%;
 	position: absolute;
 	height: 80px;
-	bottom: 0;
 }
 
 .class-subheading {
@@ -54,6 +55,7 @@ html, body {
 
 .indiv-name {
 	font-size: 36px;
+	color: black;
 }
 
 .indiv-contact {
