@@ -18,7 +18,9 @@ function populatePage() {
     var rowDiv = $("<div/>", { "class": "row" });
     for (var i = 0; i < classSize; i++) {
         var div  = createElement(students[i]);
-        rowDiv.append(div);
+        var col = $("<div/>", { "class": "col-md-3" });
+        col.append(div);
+        rowDiv.append(col);
         numCols++;
         if (numCols === maxCols || i === classSize - 1) {
             $("#image-container").append(rowDiv);
@@ -32,7 +34,7 @@ function populatePage() {
  * Creates and returns the selectable element for a particular student entry
  */
 function createElement(student) {
-    var div = $("<div/>", { "class": "indiv-container" });
+    var div = $("<div/>", { "class": "col-center indiv-container" });
     
     // Make the icons, put them in their own subgrid
     var name = $("<div/>", { "class": "student-name"});
