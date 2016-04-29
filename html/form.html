@@ -31,10 +31,10 @@
 				</div>
 				<div id="classA-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual">Abigail</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual">Laura</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual">Olivier</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual">Rebekah</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Abigail+Choe">Abigail</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -47,10 +47,10 @@
 				</div>
 				<div id="classB-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual">Joe</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual">Kyle</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual">Mandy</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual">Sarah</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Joe+Desler">Joe</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Kyle">Kyle</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Mandy">Mandy</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Sarah">Sarah</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -63,10 +63,10 @@
 				</div>
 				<div id="classC-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual">Carl</a></li>
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual">Alice</a></li>
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual">Lisa</a></li>
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual">Bart</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Carl">Carl</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Alice">Alice</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Lisa">Lisa</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Bart">Bart</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -92,5 +92,46 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="../js/menu.js"></script>
+
+	<script>
+	function getValue(varname) {
+            // First, we load the URL into a variable
+            var url = window.location.href;
+            // Next, split the url by the ?
+            var qparts = url.split("?");
+            // Check that there is a querystring, return "" if not
+            if (qparts.length == 0) { return ""; }
+            // Then find the querystring, everything after the ?
+            var query = qparts[1];
+            if (!query)
+                return '';
+            // Split the query string into variables (separates by &s)
+            var vars = query.split("&");
+            // Initialize the value with "" as default
+            var value = "";
+
+            // Iterate through vars, checking each one for varname
+            for (i=0;i<vars.length;i++) {
+                // Split the variable by =, which splits name and value
+                var parts = vars[i].split("=");
+                // Check if the correct variable
+                if (parts[0] == varname) {
+                    // Load value into variable
+                    value = parts[1];
+
+                    // End the loop
+                    break;
+                }
+            }
+        console.log(value);
+        // Convert escape code
+        value = unescape(value);
+        // Convert "+"s to " "s
+        value = value.replace(/[\%\+]/g," ");
+        console.log(value);
+        // Return the value
+        return value;
+    }
+    </script>
 </footer>
 </html>

@@ -1,4 +1,31 @@
 $(function () {
+
+	var formType = getValue('type');
+    if (formType === 'individual'){
+    	console.log('working');
+        var indivName = getValue('name');
+
+        console.log(indivName);
+        var indivNameContent = $('.form-content').find('.indiv-name');
+        console.log(indivNameContent);
+        if (indivName && indivName != "")
+            indivNameContent.text(indivName);
+        console.log(indivNameContent.text());
+    } else {
+    	var className = getValue('class');
+    	var indivNameContent = $('.form-content').find('.indiv-name');
+    	if (className && className != "")
+    		indivNameContent.text(formType.toUpperCase() + ' ' + className);
+
+    	//get students
+    	var classList = $($('#' + formType + className + '-body').find('.list-group')[0]);
+    	var students = []
+    	classList.find('li').each(function(){
+    		students.push($(this).text());
+    	});
+    	$('.form-content').find('.indiv-contact').text(students.join(', '));
+    }
+
 	$('.section-heading').click(function(){
 		var parent = $(this).parent();
 		var icon = $(this).find('.glyphicon');
