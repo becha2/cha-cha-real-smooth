@@ -28,9 +28,9 @@ body > * {
 }
 
 .btn-banner, .btn-incident {
-    font-size: 18px;
+    font-size: 14px;
     margin: auto auto;
-    width: 165px;
+    width: 115px;
 }
 
 .btn-banner, .btn-banner:visited:hover:active {
@@ -68,7 +68,7 @@ body > * {
     background-color: #FB7706;
     color: white;
     height: auto;
-    line-height: 35px;
+    line-height: 30px;
 }
 
 .btn-incident:visited {
