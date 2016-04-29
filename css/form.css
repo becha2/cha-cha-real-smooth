@@ -114,7 +114,7 @@ html, body {
 .food-icon {
 	background: url("../icons/food.png") no-repeat;
 	background-size: cover;
-	background-position-x: -4px;
+	background-position: -4px 0;
 }
 
 .naps-icon {
@@ -125,7 +125,7 @@ html, body {
 .diaper-icon {
 	background: url("../icons/diaper.png") no-repeat;
 	background-size: cover;
-	background-position-x: -2px;
+	background-position: -2px 0;
 }
 
 .ellipsis-icon {
@@ -162,6 +162,7 @@ textarea {
 	max-width: 100%;
 	display: block;
 	resize: none;
+	font-size: 12px;
 }
 
 .ui-state-focus {
