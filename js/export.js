@@ -87,7 +87,8 @@ $(function () {
             content: getWarningMessage("print"),
             confirmButton: 'Continue to Print',
             cancelButton: 'Return to Export Screen',
-            confirmButtonClass: 'btn-custom',
+            cancelButtonClass: 'btn btn-custom',
+            confirmButtonClass: 'btn btn-custom',
             icon: 'fa fa-info',
             confirm: function () {
                 alert('Logs printed successfully');
@@ -101,7 +102,8 @@ $(function () {
             content: getWarningMessage("email"),
             confirmButton: 'Send Email to Parents',
             cancelButton: 'Return to Export Screen',
-            confirmButtonClass: 'btn-custom',
+            cancelButtonClass: 'btn btn-custom',
+            confirmButtonClass: 'btn btn-custom',
             confirm: function () {
                 alert('Logs emailed successfully');
             }
