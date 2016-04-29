@@ -55,7 +55,9 @@ function createElement(student) {
     
     var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
     logIcon.click(function() {
-        window.location.href = "html/form.html?class=B&type=individual";
+        var studentName = $(this).parent().parent().parent().find('.student-name').text();
+        console.log(studentName);
+        window.location.href = "html/form.html?class=B&type=individual&name=" + studentName;
     });
     logIcon.hover(function() {
         options.text("Daily Log");
