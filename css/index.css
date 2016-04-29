@@ -10,8 +10,9 @@
     display: inline-block;
     height: 220px;
     width: 175px;
-    border: 1px solid black;
+    border: 1px solid #cecece;
     background-color: white;
+    box-shadow: 0 0 15px -5px #999999;
 }
 
 .darken {
@@ -33,7 +34,6 @@
     -ms-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    border: 1px solid black;
 }
 
 .darken:hover .student-photo {
@@ -91,9 +91,6 @@
     vertical-align: middle;
     float: none;
 }
-.header {
-    height: 100px;
-}
 
 .header > *{
     display: inline-block;
@@ -107,18 +104,4 @@
     float: right;
     margin: auto;
 }
-
-/*#export-btn {
-    margin-bottom: 20px;
-    width: 165px;
-}
-
-#incident-btn {
-    margin-bottom: 20px;
-    width: 165px;
-}
-
-#class-log-btn {
-    width: 165px;
-}*/
 
