@@ -12,12 +12,9 @@ body, html {
     height: auto;
 }
 
-#topBar {
-    margin-top: 32px;
-}
-
 #topBar h1 {
     padding: 0;
+    margin: 0;
 }
 
 #main{
@@ -27,9 +24,11 @@ body, html {
 .selection-container {
     padding: 0;
 }
+
 .selection{
     text-align: left;
     height: 100%;
+    margin-top: 20px;
 }
 
 .preview {
