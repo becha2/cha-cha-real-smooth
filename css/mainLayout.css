@@ -20,13 +20,12 @@ body > * {
 
 .banner-logo {
 	margin-left: 10px;
-	height: 80px;
+	height: 60px;
 }
 
 .banner-button-wrapper{
     position: absolute;
     right: 20px;
-    top: 25%
 }
 
 .btn-banner, .btn-incident {
@@ -41,6 +40,9 @@ body > * {
 
 .btn-banner {
     background-color: #562A72;
+    line-height: 60px;
+    height: 60px;
+    padding: 0;
 }
 
 .btn-banner:visited {
@@ -66,6 +68,8 @@ body > * {
 .btn-incident, .btn-incident:visited {
     background-color: #FB7706;
     color: white;
+    height: auto;
+    line-height: 35px;
 }
 
 .btn-incident:visited {
