@@ -89,7 +89,11 @@ body > * {
 
 /* Incident report popup */
 .close {
-    color: #E7D3F3;
+    color: #fefefe;
+}
+
+.close:visited {
+    color: #fefefe;
 }
 
 .close:hover {
