@@ -4,6 +4,7 @@ html, body {
 	position: relative;
 	color: black;
 	margin: 0;
+	background-color: #ebebeb;
 }
 
 .form-content {
@@ -17,6 +18,8 @@ html, body {
 	left: 200px;
 	height: auto;
 	overflow-x: hidden;
+	background-color: #fff;
+	box-shadow: 0 0 15px -5px #999999;
 }
 .form-container {
 	position: relative;
