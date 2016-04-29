@@ -65,10 +65,6 @@ function createElement(student) {
     }, function() {
         options.text("Choose an Option");
     });
-    // var incidentIcon = $("<span/>", { "class": "glyphicon glyphicon-alert" });
-    // incidentIcon.click(function() {
-    //     window.location.href = "html/individual-form.html#incidentReport";
-    // });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
     iconContainer.append(options);

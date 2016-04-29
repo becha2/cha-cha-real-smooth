@@ -43,6 +43,7 @@ body > * {
     line-height: 60px;
     height: 60px;
     padding: 0;
+    margin: auto 5px;
 }
 
 .btn-banner:visited {
@@ -84,6 +85,19 @@ body > * {
 .btn-incident:active {
     background-color: #b3400f;
     color: white;
+}
+
+/* Incident report popup */
+.close {
+    color: #E7D3F3;
+}
+
+.close:hover {
+    color: white;
+}
+
+.close:active {
+    color: #cecece;
 }
 
 /* Buttons and other misc. */
