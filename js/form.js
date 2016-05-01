@@ -5,12 +5,9 @@ $(function () {
     	console.log('working');
         var indivName = getValue('name');
 
-        console.log(indivName);
         var indivNameContent = $('.form-content').find('.indiv-name');
-        console.log(indivNameContent);
         if (indivName && indivName != "")
             indivNameContent.text(indivName);
-        console.log(indivNameContent.text());
     } else {
     	var className = getValue('class');
     	var indivNameContent = $('.form-content').find('.indiv-name');
