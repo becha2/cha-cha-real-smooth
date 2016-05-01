@@ -96,7 +96,7 @@ $(document).ready(function() {
     $(".glyphicon-earphone").click(function () { // callParents confirmation popup
         $.confirm({
             title: 'Confirmation',
-            content: 'Call (617)710-6158?',
+            content: 'Call (510) 888-8888?',
             confirmButton: 'Call',
             cancelButton: 'Cancel',
             cancelButtonClass: 'btn btn-custom-cancel',

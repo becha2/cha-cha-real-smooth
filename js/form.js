@@ -2,7 +2,7 @@ $(function () {
 
 	var formType = getValue('type');
     if (formType === 'individual'){
-    	console.log('working');
+    	// console.log('working');
         var indivName = getValue('name');
 
         var indivNameContent = $('.form-content').find('.indiv-name');
