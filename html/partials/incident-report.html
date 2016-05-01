@@ -11,7 +11,7 @@
 
 	<div class="participants">
 		<!-- <div class="children-search"> -->
-		<h4>Children Involved</h4>
+		<h4>Children Involved*</h4>
 			<div class="col-lg-12 search-container" style="padding: 0">
 				<div class="input-group" style="width: 100%">
 						<select multiple class="search-for" data-placeholder="Search For..">
@@ -39,9 +39,9 @@
 		</div>
 
 		<div class="description">
-			<h4>Description of Incident</h4>
+			<h4>Description of Incident*</h4>
 			<textarea name="description-input" cols="75" rows="5" wrap="virtual"></textarea>
-			<h4>Care Given</h4>
+			<h4>Care Given*</h4>
 			<textarea name="description-input" cols="75" rows="5" wrap="virtual"></textarea>
 		</div>
 </div>
@@ -95,11 +95,11 @@
 			$.confirm({
 	            title: 'Confirmation',
 	            content: 'Are you sure you want to send the incident report to the parents?',
-	            confirmButton: 'Send',
-	            cancelButton: 'Cancel',
-	            cancelButtonClass: 'btn btn-custom-cancel',
-	            confirmButtonClass: 'btn btn-custom',
-	            confirm: function () {
+	            confirmButton: 'Cancel',
+	            cancelButton: 'Send',
+	            cancelButtonClass: 'btn btn-custom',
+	            confirmButtonClass: 'btn btn-custom-cancel',
+	            cancel: function () {
 	                $('.modal').addClass('can-close');
 	                $('.modal').modal('hide');
 	                $('.jconfirm').hide();
@@ -107,7 +107,7 @@
 	            }
 	        });
 		} else {
-			alert('Please fill out all the fields.')
+			alert('Please fill out all the fields.');
 		}
 	});
 
@@ -129,11 +129,11 @@
 			$.confirm({
 				title: 'Warning: Unsaved changes',
 				content: 'Closing the report will clear any changes you have made. Are you sure you want to exit?',
-				confirmButton: 'Yes',
-				cancelButton: 'No',
-				cancelButtonClass: 'btn btn-custom-cancel',
-				confirmButtonClass: 'btn btn-custom',
-				confirm: function(){
+				confirmButton: 'No',
+				cancelButton: 'Yes',
+				cancelButtonClass: 'btn btn-custom',
+				confirmButtonClass: 'btn btn-custom-cancel',
+				cancel: function(){
 					$('.modal').addClass('can-close');
 					$('.modal').modal('hide');
 				}
