@@ -46,7 +46,7 @@
 		</div>
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-custom" data-dismiss="modal" id="sendParents">Send to Parents</button>
+	<button type="button" class="btn btn-custom send-btn" >Send to Parents</button>
 </div>
 </div>
 
@@ -58,20 +58,88 @@
 		$(this).addClass('active');
 	});
 
-	$('.search-for').chosen({width: '100%'})
+	$('.search-for').chosen({width: '100%'});
 
-	$('#sendParents').click(function () { // sendParents confirmation popup
-        $.confirm({
-            title: 'Confirmation',
-            content: 'Send to parents?',
-            confirmButton: 'Send',
-            cancelButton: 'Cancel',
-            cancelButtonClass: 'btn btn-custom-cancel',
-            confirmButtonClass: 'btn btn-custom',
-            icon: 'fa fa-info',
-            confirm: function () {
-                alert('Sent successfully');
-            }
-        });
-    });
+	//Checks if any field has a value
+	var getIsAnyFilledOut = function () {
+		var filledOut = false;
+		var textAreas = $('.modal').find('textarea');
+		textAreas.each(function(){
+			if ($(this).text() != "" || $(this).val() != "")
+				filledOut = true;
+		});
+		var selectedOptions = $('.modal').find('.search-choice');
+		if (selectedOptions.length > 0)
+			filledOut = true;
+
+		return filledOut;
+	}
+
+	//Checks if all fields have a value.
+	var getIsAllFilledOut = function(){
+		var filledOut = true;
+		var textAreas = $('.modal').find('textarea');
+		textAreas.each(function(){
+			if ($(this).text() == "" && $(this).val() == "")
+				filledOut = false;
+		});
+		var selectedOptions = $('.modal').find('.search-choice');
+		if (selectedOptions.length == 0)
+			filledOut = false;
+
+		return filledOut;
+	}
+
+	$('.send-btn').click(function(){
+		if (getIsAllFilledOut()){
+			$.confirm({
+	            title: 'Confirmation',
+	            content: 'Are you sure you want to send the incident report to the parents?',
+	            confirmButton: 'Send',
+	            cancelButton: 'Cancel',
+	            cancelButtonClass: 'btn btn-custom-cancel',
+	            confirmButtonClass: 'btn btn-custom',
+	            confirm: function () {
+	                $('.modal').addClass('can-close');
+	                $('.modal').modal('hide');
+	                $('.jconfirm').hide();
+	                alert('Report sent successfully');
+	            }
+	        });
+		} else {
+			alert('Please fill out all the fields.')
+		}
+	});
+
+	//Safety check when closing the modal
+	$('.modal').on('hide.bs.modal', function(){
+		var textAreas = $('.modal').find('textarea');
+		var selectedOptions = $('.modal').find('.search-choice');
+
+		if ($('.modal').hasClass('can-close')){
+			$('.modal').removeClass('can-close');
+			textAreas.text("");
+			textAreas.val("");
+			$('.search-for').val('').trigger('chosen:updated');
+			return true;
+		}
+
+		var shouldHide = !getIsAnyFilledOut();
+		if (!shouldHide){
+			$.confirm({
+				title: 'Warning: Unsaved changes',
+				content: 'Closing the report will clear any changes you have made. Are you sure you want to exit?',
+				confirmButton: 'Yes',
+				cancelButton: 'No',
+				cancelButtonClass: 'btn btn-custom-cancel',
+				confirmButtonClass: 'btn btn-custom',
+				confirm: function(){
+					$('.modal').addClass('can-close');
+					$('.modal').modal('hide');
+				}
+			});
+		}
+		return shouldHide;
+	});
+
 </script>
