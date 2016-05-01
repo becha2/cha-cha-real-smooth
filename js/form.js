@@ -2,15 +2,15 @@ $(function () {
 
 	var formType = getValue('type');
     if (formType === 'individual'){
-    	console.log('working');
+    	// console.log('working');
         var indivName = getValue('name');
 
-        console.log(indivName);
+        // console.log(indivName);
         var indivNameContent = $('.form-content').find('.indiv-name');
-        console.log(indivNameContent);
+        // console.log(indivNameContent);
         if (indivName && indivName != "")
             indivNameContent.text(indivName);
-        console.log(indivNameContent.text());
+        // console.log(indivNameContent.text());
     } else {
     	var className = getValue('class');
     	var indivNameContent = $('.form-content').find('.indiv-name');
