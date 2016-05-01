@@ -94,7 +94,7 @@
 		if (getIsAllFilledOut()){
 			$.confirm({
 	            title: 'Confirmation',
-	            content: 'Are you sure you want to send the incident report to the parents?',
+	            content: 'Do you want to send the incident report to the parents?',
 	            confirmButton: 'Cancel',
 	            cancelButton: 'Send',
 	            cancelButtonClass: 'btn btn-custom',
@@ -127,8 +127,8 @@
 		var shouldHide = !getIsAnyFilledOut();
 		if (!shouldHide){
 			$.confirm({
-				title: 'Warning: Unsaved changes',
-				content: 'Closing the report will clear any changes you have made. Are you sure you want to exit?',
+				title: 'Warning',
+				content: 'Closing the report will clear all of the fields. Are you sure you want to exit?',
 				confirmButton: 'No',
 				cancelButton: 'Yes',
 				cancelButtonClass: 'btn btn-custom',
