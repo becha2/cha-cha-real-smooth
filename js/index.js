@@ -98,5 +98,9 @@ $(document).ready(function() {
                 'trigger': 'focus click',
                 'placement': 'top'});
 
+    $('.glyphicon-earphone').on(':visible', function(e){
+        console.log(e);
+    });
+
     // $('[data-toggle="popover"]').popover(); 
 });
