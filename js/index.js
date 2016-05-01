@@ -43,7 +43,8 @@ function createElement(student) {
     var options = $("<div/>", { "class": "student-prompt" });
     options.text("Choose an Option");
 
-    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" });
+    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone", "data-toggle": "popover", "title": "Contact Info", "data-content": "Dad: (617)710-6158", "data-trigger": "focus" });
+
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
     // });
@@ -88,4 +89,15 @@ function createElement(student) {
 
 $(document).ready(function() {
     populatePage();
+
+    $(".glyphicon-earphone").popover(
+            {'content': "",
+                'title': "",
+                'tabindex': "0",
+                'data-trigger': "focus",
+                'trigger': 'focus click',
+                'placement': 'top'});
+
+    // $('[class="glyphicon-earphone"]').popover(); 
+    // $('[data-toggle="popover"]').popover(); 
 });
