@@ -98,6 +98,5 @@ $(document).ready(function() {
                 'trigger': 'focus click',
                 'placement': 'top'});
 
-    // $('[class="glyphicon-earphone"]').popover(); 
     // $('[data-toggle="popover"]').popover(); 
 });

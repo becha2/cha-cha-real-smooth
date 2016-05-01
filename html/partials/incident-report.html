@@ -46,7 +46,7 @@
 		</div>
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-custom" data-dismiss="modal">Send to Parents</button>
+	<button type="button" class="btn btn-custom" data-dismiss="modal" id="sendParents">Send to Parents</button>
 </div>
 </div>
 
@@ -59,4 +59,19 @@
 	});
 
 	$('.search-for').chosen({width: '100%'})
+
+	$('#sendParents').click(function () { // sendParents confirmation popup
+        $.confirm({
+            title: 'Confirmation',
+            content: 'Send to parents?',
+            confirmButton: 'Send',
+            cancelButton: 'Cancel',
+            cancelButtonClass: 'btn btn-custom-cancel',
+            confirmButtonClass: 'btn btn-custom',
+            icon: 'fa fa-info',
+            confirm: function () {
+                alert('Sent successfully');
+            }
+        });
+    });
 </script>

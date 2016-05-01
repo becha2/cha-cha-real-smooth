@@ -105,7 +105,7 @@ body > * {
 }
 
 /* Buttons and other misc. */
-.btn-custom, .btn-custom:visited:hover:active {
+.btn-custom, .btn-custom:visited:hover:active, .btn-custom-cancel, .btn-custom-cancel:hover {
 	color: white;
 	margin-bottom: 20px;
 }
@@ -113,6 +113,18 @@ body > * {
 .btn-custom {
 	background-color: #e7d3f3;
 	color: #1C012D;
+}
+
+.btn-custom-cancel {
+    background-color: #FFBE99;
+    /*background-color: #FB7706;*/
+    color: #1C012D;
+}
+
+.btn-custom-cancel:hover {
+    color: white;
+    background-color: #FB7706;
+    /*background-color: #ED5C1E;*/
 }
 
 .btn-custom:hover {
