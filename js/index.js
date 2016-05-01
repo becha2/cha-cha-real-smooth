@@ -97,12 +97,12 @@ $(document).ready(function() {
         $.confirm({
             title: 'Confirmation',
             content: 'Call (510) 888-8888?',
-            confirmButton: 'Call',
-            cancelButton: 'Cancel',
-            cancelButtonClass: 'btn btn-custom-cancel',
-            confirmButtonClass: 'btn btn-custom',
+            confirmButton: 'Cancel',
+            cancelButton: 'Call',
+            cancelButtonClass: 'btn btn-confirm-default',
+            confirmButtonClass: 'btn btn-custom-cancel',
             icon: 'fa fa-info',
-            confirm: function () {
+            cancel: function () {
                 alert('Calling...');
             }
         });
