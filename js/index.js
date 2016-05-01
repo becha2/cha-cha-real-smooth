@@ -43,7 +43,10 @@ function createElement(student) {
     var options = $("<div/>", { "class": "student-prompt" });
     options.text("Choose an Option");
 
-    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone", "data-toggle": "popover", "title": "Contact Info", "data-content": "Dad: (617)710-6158", "data-trigger": "focus" });
+    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone"});
+
+        // part of popover implementation (changed to popup)
+        // , "data-toggle": "popover", "title": "Contact Info", "data-content": "Dad: (617)710-6158", "data-trigger": "focus" });
 
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
@@ -90,13 +93,29 @@ function createElement(student) {
 $(document).ready(function() {
     populatePage();
 
-    $(".glyphicon-earphone").popover(
-            {'content': "",
-                'title': "",
-                'tabindex': "0",
-                'data-trigger': "focus",
-                'trigger': 'focus click',
-                'placement': 'top'});
+    $(".glyphicon-earphone").click(function () { // callParents confirmation popup
+        $.confirm({
+            title: 'Confirmation',
+            content: 'Call (617)710-6158?',
+            confirmButton: 'Call',
+            cancelButton: 'Cancel',
+            cancelButtonClass: 'btn btn-custom-cancel',
+            confirmButtonClass: 'btn btn-custom',
+            icon: 'fa fa-info',
+            confirm: function () {
+                alert('Calling...');
+            }
+        });
+    });
+
+    // Contact info in popover (changed to popup)
+    // $(".glyphicon-earphone").popover(
+    //         {'content': "",
+    //             'title': "",
+    //             'tabindex': "0",
+    //             'data-trigger': "focus",
+    //             'trigger': 'focus click',
+    //             'placement': 'top'});
 
     // $('[data-toggle="popover"]').popover(); 
 });

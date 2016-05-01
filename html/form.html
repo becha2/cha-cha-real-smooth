@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
 	<link rel="stylesheet" type="text/css" href="../Library/jquery-confirm.css">
     <link rel="stylesheet" type="text/css" href="../Library/chosen_v1.5.0/chosen.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/mainLayout.css">
@@ -24,14 +26,14 @@
     <div class="menu-sidebar">
     	<div class="panel-group">
 			<div class="panel panel-default">
-				<div id="classA-title" class="panel-heading">
+				<div id="classA-title" class="panel-heading clickable">
 					<h4 class="panel-title">			
 						<a href="form.html?class=A&type=class">Class A</a>
 					</h4>
 				</div>
 				<div id="classA-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Abigail+Choe">Abigail</a></li>
+			          <li class="list-group-item clickable-li"><a href="form.html?class=A&type=individual&name=Abigail+Choe" class="clickable-text">Abigail</a></li>
 			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura</a></li>
 			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier</a></li>
 			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah</a></li>
@@ -40,7 +42,7 @@
 			</div>
 
 			<div class="panel panel-default">
-				<div id="classB-title" class="panel-heading">
+				<div id="classB-title" class="panel-heading clickable">
 					<h4 class="panel-title">
 						<a href="form.html?class=B&type=class">Class B</a>
 					</h4>
@@ -56,7 +58,7 @@
 			</div>
 
 			<div class="panel panel-default">
-				<div id="classC-title" class="panel-heading">
+				<div id="classC-title" class="panel-heading clickable">
 					<h4 class="panel-title">
 						<a href="form.html?class=C&type=class">Class C</a>
 					</h4>
@@ -123,15 +125,31 @@
                     break;
                 }
             }
-        console.log(value);
+        // console.log(value);
         // Convert escape code
         value = unescape(value);
         // Convert "+"s to " "s
         value = value.replace(/[\%\+]/g," ");
-        console.log(value);
+        // console.log(value);
         // Return the value
         return value;
     }
+    </script>
+
+    <script>
+    	$("li.clickable-li").click(function(){
+    	// $("ul li").click(function(){
+    	    console.log = "triggered";
+    	    $(this).find("a").trigger( "click" );
+    	   //  	window.location = $(this).find("a").first().attr("href");
+     			// return false;
+    	});
+
+    	$("a.clickable-text").click(function(e){
+    	// $("a", "li.clickable-li").click(function(e){
+    		console.log = "item clicked";
+    		e.stopPropagation();
+		}); 
     </script>
 </footer>
 </html>
