@@ -4,6 +4,23 @@ $(function () {
     if (formType === 'individual'){
     	// console.log('working');
         var indivName = getValue('name');
+        var className = getValue('class');
+
+        // console.log(indivName, className);
+        // $('li:contains(Abigail Choe)').css("background","red");
+        $("div.clickable:contains('Class "+className+"')").css({
+            "background": "#562A72",
+            "color": "#ebebeb"
+        });
+
+        $("a:contains('"+indivName+"')").css({
+            "color": "#562A72",
+            "font-weight": "bold"
+        });
+        //$("li:contains('"+indivName+"')").css({
+        //     "background": "#562A72"
+        // });
+        // $("li[innerHTML=Abigail Choe]").css("background", "red");
 
         // console.log(indivName);
         var indivNameContent = $('.form-content').find('.indiv-name');
@@ -16,6 +33,11 @@ $(function () {
     	var indivNameContent = $('.form-content').find('.indiv-name');
     	if (className && className != "")
     		indivNameContent.text(formType.toUpperCase() + ' ' + className);
+
+        $("div.clickable:contains('Class "+className+"')").css({
+            "background": "#562A72",
+            "color": "#ebebeb"
+        });
 
     	//get students
     	var classList = $($('#' + formType + className + '-body').find('.list-group')[0]);

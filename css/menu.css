@@ -25,6 +25,32 @@
 	margin-top: 0;
 }
 
+.panel-customize {
+    background-color: #7e5c94;
+    color: #ebebeb
+    border-color: #ebebeb;
+}
+
+.panel-heading {
+    background-color: #7e5c94;
+    color: #ebebeb
+}
+
+.list-group {
+	background-color: white;
+	color: #bdbdbd;
+}
+
+.list-group-item {
+	background-color: white;
+	color: #bdbdbd;
+}
+
+.list-group-item a {
+	color: #bdbdbd;
+	text-decoration: none;
+}
+
 .menu-sidebar-heading {
     border-radius: 0;
     -webkit-border-radius: 0;
