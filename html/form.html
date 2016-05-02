@@ -35,10 +35,17 @@
 				</div>
 				<div id="classA-body" class="panel-collapse collapse">
 					<ul class="list-group">
+<<<<<<< HEAD
 			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Abigail+Choe" class="clickable-text">Abigail Choe</a></li>
 			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura Eckman</a></li>
 			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier Midy</a></li>
 			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah Cha</a></li>
+=======
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Abigail+Choe">Abigail Choe</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura Eckman</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier Midy</a></li>
+			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah Cha</a></li>
+>>>>>>> 3cf0d510e6a02a4062db5c37c05c3b376f938be0
 			        </ul>
 				</div>
 			</div>
@@ -64,6 +71,12 @@
 			          <li class="list-group-item clickable">
 			          	<div class="indicator"></div>
 			          	<a href="form.html?class=B&type=individual&name=Sarah+Brown">Sarah Brown</a></li>
+
+			          <!-- <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Joe+Desler">Joe Desler</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Kyle+Jones">Kyle Jones</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Mandy+Wu">Mandy Wu</a></li>
+			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Sarah+Brown">Sarah Brown</a></li> -->
+
 			        </ul>
 				</div>
 			</div>
@@ -76,10 +89,10 @@
 				</div>
 				<div id="classC-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item clickable"><a href="form.html?class=C&type=individual&name=Carl">Carl</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=C&type=individual&name=Alice">Alice</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=C&type=individual&name=Lisa">Lisa</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=C&type=individual&name=Bart">Bart</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Alice+Wonderlin">Alice Wonderlin</a></li>
+                      <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Bart+Simpson">Bart Simpson</a></li>
+                      <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Carl+James">Carl James</a></li>
+			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Lisa+Simpson">Lisa Simpson</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -99,12 +112,12 @@
 <footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
+  
 	<script type="text/javascript" src="../Library/chosen_v1.5.0/chosen.jquery.js"></script>
 	<script type="text/javascript" src="../Library/jquery-confirm.js"></script>
 	<script type="text/javascript" src="../Library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
+    <script type="text/javascript" src="../js/storage.js"></script>
 	<script type="text/javascript" src="../js/menu.js"></script>
 
 	<script>
@@ -137,12 +150,10 @@
                     break;
                 }
             }
-        // console.log(value);
         // Convert escape code
         value = unescape(value);
         // Convert "+"s to " "s
         value = value.replace(/[\%\+]/g," ");
-        // console.log(value);
         // Return the value
         return value;
     }

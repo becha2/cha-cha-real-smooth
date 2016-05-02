@@ -41,7 +41,7 @@ function createElement(student) {
     name.text(student);
     
     var options = $("<div/>", { "class": "student-prompt" });
-    options.text("Choose an Option");
+    options.text("");
 
     var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone"});
 
@@ -54,7 +54,7 @@ function createElement(student) {
     phoneIcon.hover(function() {
         options.text("Contact Info");
     }, function() {
-        options.text("Choose an Option");
+        options.text("");
     });
     
     var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
@@ -67,7 +67,7 @@ function createElement(student) {
     logIcon.hover(function() {
         options.text("Daily Log");
     }, function() {
-        options.text("Choose an Option");
+        options.text("");
     });
     
     var iconContainer = $("<div/>", { "class": "image-overlay"});
@@ -90,19 +90,19 @@ function createElement(student) {
     return div;
 }
 
-$(document).ready(function() {
+$(function() {
     populatePage();
 
     $(".glyphicon-earphone").click(function () { // callParents confirmation popup
         $.confirm({
             title: 'Confirmation',
             content: 'Call (510) 888-8888?',
-            confirmButton: 'Call',
-            cancelButton: 'Cancel',
-            cancelButtonClass: 'btn btn-custom-cancel',
-            confirmButtonClass: 'btn btn-custom',
+            confirmButton: 'Cancel',
+            cancelButton: 'Call',
+            cancelButtonClass: 'btn btn-confirm-default',
+            confirmButtonClass: 'btn btn-custom-cancel',
             icon: 'fa fa-info',
-            confirm: function () {
+            cancel: function () {
                 alert('Calling...');
             }
         });
