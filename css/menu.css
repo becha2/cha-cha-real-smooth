@@ -29,11 +29,12 @@
     background-color: #7e5c94;
     color: #ebebeb
     border-color: #ebebeb;
+    text-decoration: none;
 }
 
 .panel-heading {
     background-color: #7e5c94;
-    color: #ebebeb
+    color: #ebebeb;
 }
 
 .list-group {
@@ -55,7 +56,7 @@
 	width: 3px;
 	height: 20px;
 	float: left;
-	background-color: red;
+	background-color: transparent;
 	vertical-align: middle;
 }
 

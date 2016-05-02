@@ -12,7 +12,6 @@
 	
     <link rel="stylesheet" type="text/css" href="../Library/jquery-confirm.css">
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
-
 </head>
 
 <body>
@@ -35,17 +34,18 @@
 				</div>
 				<div id="classA-body" class="panel-collapse collapse">
 					<ul class="list-group">
-<<<<<<< HEAD
-			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Abigail+Choe" class="clickable-text">Abigail Choe</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura Eckman</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier Midy</a></li>
-			          <li class="list-group-item clickable"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah Cha</a></li>
-=======
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Abigail+Choe">Abigail Choe</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura Eckman</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier Midy</a></li>
-			          <li class="list-group-item"><a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah Cha</a></li>
->>>>>>> 3cf0d510e6a02a4062db5c37c05c3b376f938be0
+			          <li class="list-group-item clickable">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=A&type=individual&name=Abigail+Choe" class="clickable-text">Abigail Choe</a></li>
+			          <li class="list-group-item clickable">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=A&type=individual&name=Laura+Eckman">Laura Eckman</a></li>
+			          <li class="list-group-item clickable">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=A&type=individual&name=Olivier+Midy">Olivier Midy</a></li>
+			          <li class="list-group-item clickable">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=A&type=individual&name=Rebekah+Cha">Rebekah Cha</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 				<div id="classB-body" class="panel-collapse collapse">
 					<ul class="list-group">
 			          <li class="list-group-item clickable">
-			          	<div class="indicator-active"></div>
+			          	<div class="indicator"></div>
 			          	<a href="form.html?class=B&type=individual&name=Joe+Desler">Joe Desler</a>
 			          </li>
 			          <li class="list-group-item clickable">
@@ -71,12 +71,6 @@
 			          <li class="list-group-item clickable">
 			          	<div class="indicator"></div>
 			          	<a href="form.html?class=B&type=individual&name=Sarah+Brown">Sarah Brown</a></li>
-
-			          <!-- <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Joe+Desler">Joe Desler</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Kyle+Jones">Kyle Jones</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Mandy+Wu">Mandy Wu</a></li>
-			          <li class="list-group-item"><a href="form.html?class=B&type=individual&name=Sarah+Brown">Sarah Brown</a></li> -->
-
 			        </ul>
 				</div>
 			</div>
@@ -89,10 +83,18 @@
 				</div>
 				<div id="classC-body" class="panel-collapse collapse">
 					<ul class="list-group">
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Alice+Wonderlin">Alice Wonderlin</a></li>
-                      <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Bart+Simpson">Bart Simpson</a></li>
-                      <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Carl+James">Carl James</a></li>
-			          <li class="list-group-item"><a href="form.html?class=C&type=individual&name=Lisa+Simpson">Lisa Simpson</a></li>
+			          <li class="list-group-item">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=C&type=individual&name=Alice+Wonderlin">Alice Wonderlin</a></li>
+                      <li class="list-group-item">
+                      <div class="indicator"></div>
+                      <a href="form.html?class=C&type=individual&name=Bart+Simpson">Bart Simpson</a></li>
+                      <li class="list-group-item">
+                      <div class="indicator"></div>
+                      <a href="form.html?class=C&type=individual&name=Carl+James">Carl James</a></li>
+			          <li class="list-group-item">
+			          <div class="indicator"></div>
+			          <a href="form.html?class=C&type=individual&name=Lisa+Simpson">Lisa Simpson</a></li>
 			        </ul>
 				</div>
 			</div>
@@ -161,15 +163,10 @@
 
     <script>
     	$("div.clickable").click(function(){
-    	    // console.log("class");
-
-    	    // $(this).css("background", "red");
     	    window.location.href = $(this).find("a").first().attr("href");
     	});
 
     	$("li.clickable").click(function(){
-    	    // console.log("indiv");
-    	    $('div',this).switchClass("indicator-active", "indicator");
     	    window.location.href = $(this).find("a").first().attr("href");
     	});
 

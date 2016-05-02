@@ -2,11 +2,8 @@ $(function () {
     var formType = getValue('type');
     if (formType === 'individual') {
         var indivName = getValue('name');
-<<<<<<< HEAD
         var className = getValue('class');
 
-        // console.log(indivName, className);
-        // $('li:contains(Abigail Choe)').css("background","red");
         $("div.clickable:contains('Class "+className+"')").css({
             "background": "#562A72",
             "color": "#ebebeb"
@@ -16,14 +13,13 @@ $(function () {
             "color": "#562A72",
             "font-weight": "bold"
         });
-        //$("li:contains('"+indivName+"')").css({
-        //     "background": "#562A72"
-        // });
-        // $("li[innerHTML=Abigail Choe]").css("background", "red");
 
-        // console.log(indivName);
-=======
->>>>>>> 3cf0d510e6a02a4062db5c37c05c3b376f938be0
+        $("a:contains('"+indivName+"')").parent().children("div").addClass('indicator-active').removeClass('indicator');
+
+        $("a:contains('"+indivName+"')").parent().children("div").css({
+            "class":"indicator-active"
+        });
+
         var indivNameContent = $('.form-content').find('.indiv-name');
         if (indivName && indivName != "") {;
             indivNameContent.text(indivName);
@@ -49,7 +45,6 @@ $(function () {
             }
         });
     } else {
-<<<<<<< HEAD
     	var className = getValue('class');
     	var indivNameContent = $('.form-content').find('.indiv-name');
     	if (className && className != "")
@@ -67,22 +62,15 @@ $(function () {
     		students.push($(this).text());
     	});
     	$('.form-content').find('.indiv-contact').text(students.join(', '));
-=======
-        var className = getValue('class');
-        var indivNameContent = $('.form-content').find('.indiv-name');
-        if (className && className != "") {
-            indivNameContent.text(formType.toUpperCase() + ' ' + className);
-        }
         
         var classData = JSON.parse(window.localStorage.getItem(className));
         $('.form-content').find('.indiv-contact').text(classData["students"].join(', '));
-        console.log(classData);
+        // console.log(classData);
         $("#accordion textarea").each(function() {
             var parentName = $(this).parent().attr("id");
             var formSection = parentName.split("-")[0];
             $(this).val(classData[formSection]);
         });
->>>>>>> 3cf0d510e6a02a4062db5c37c05c3b376f938be0
     }
 
     $('.section-heading').click(function(){
