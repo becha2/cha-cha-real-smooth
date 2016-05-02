@@ -2,6 +2,24 @@ $(function () {
     var formType = getValue('type');
     if (formType === 'individual') {
         var indivName = getValue('name');
+        var className = getValue('class');
+
+        $("div.clickable:contains('Class "+className+"')").css({
+            "background": "#562A72",
+            "color": "#ebebeb"
+        });
+
+        $("a:contains('"+indivName+"')").css({
+            "color": "#562A72",
+            "font-weight": "bold"
+        });
+
+        $("a:contains('"+indivName+"')").parent().children("div").addClass('indicator-active').removeClass('indicator');
+
+        $("a:contains('"+indivName+"')").parent().children("div").css({
+            "class":"indicator-active"
+        });
+
         var indivNameContent = $('.form-content').find('.indiv-name');
         if (indivName && indivName != "") {;
             indivNameContent.text(indivName);
@@ -27,15 +45,27 @@ $(function () {
             }
         });
     } else {
-        var className = getValue('class');
-        var indivNameContent = $('.form-content').find('.indiv-name');
-        if (className && className != "") {
-            indivNameContent.text(formType.toUpperCase() + ' ' + className);
-        }
+    	var className = getValue('class');
+    	var indivNameContent = $('.form-content').find('.indiv-name');
+    	if (className && className != "")
+    		indivNameContent.text(formType.toUpperCase() + ' ' + className);
+
+        $("div.clickable:contains('Class "+className+"')").css({
+            "background": "#562A72",
+            "color": "#ebebeb"
+        });
+
+    	//get students
+    	var classList = $($('#' + formType + className + '-body').find('.list-group')[0]);
+    	var students = []
+    	classList.find('li').each(function(){
+    		students.push($(this).text());
+    	});
+    	$('.form-content').find('.indiv-contact').text(students.join(', '));
         
         var classData = JSON.parse(window.localStorage.getItem(className));
         $('.form-content').find('.indiv-contact').text(classData["students"].join(', '));
-        console.log(classData);
+        // console.log(classData);
         $("#accordion textarea").each(function() {
             var parentName = $(this).parent().attr("id");
             var formSection = parentName.split("-")[0];
