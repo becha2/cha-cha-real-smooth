@@ -4,10 +4,11 @@
  */
 
 /**
- * Populate the body of the page with relevant links and options
+ * Populate the body of the page with relevant links and options.
+ * This page is static, so we default to populating for class B.
  */
 function populatePage() {
-    var students = ["Joe", "Mandy", "Kyle", "Sarah"];
+    var students = studentsB;
 
     // TODO: Acquire list called students from some data structure; divs customized for each
     var classSize = students.length;
@@ -59,10 +60,8 @@ function createElement(student) {
     
     var logIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-list-alt" });
     logIcon.click(function() {
-        var studentName = $(this).parent().parent().parent().find('.student-name').text();
-        studentName = studentName.replace(" ", /[\%\+]/g);
-        console.log(studentName);
-        window.location.href = "html/form.html?class=B&type=individual&name=" + studentName;
+        var studentURL = student.replace(" ", "+");
+        window.location.href = "html/form.html?class=B&type=individual&name=" + studentURL;
     });
     logIcon.hover(function() {
         options.text("Daily Log");
