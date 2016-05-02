@@ -51,6 +51,22 @@
 	text-decoration: none;
 }
 
+.indicator {
+	width: 3px;
+	height: 20px;
+	float: left;
+	background-color: red;
+	vertical-align: middle;
+}
+
+.indicator-active {
+	width: 3px;
+	height: 20px;
+	float: left;
+	background-color: #7e5c94;
+	vertical-align: middle;
+}
+
 .menu-sidebar-heading {
     border-radius: 0;
     -webkit-border-radius: 0;
