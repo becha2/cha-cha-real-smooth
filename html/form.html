@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
+	<link rel="stylesheet" type="text/css" href="../Library/jquery-confirm.css">
     <link rel="stylesheet" type="text/css" href="../Library/chosen_v1.5.0/chosen.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/mainLayout.css">
 	<link rel="stylesheet" type="text/css" href="../css/form.css">
 	<link rel="stylesheet" type="text/css" href="../css/incident-report.css">
+	
+    <link rel="stylesheet" type="text/css" href="../Library/jquery-confirm.css">
 	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 
 </head>
@@ -24,7 +28,7 @@
     <div class="menu-sidebar">
     	<div class="panel-group">
 			<div class="panel panel-default">
-				<div id="classA-title" class="panel-heading">
+				<div id="classA-title" class="panel-heading clickable">
 					<h4 class="panel-title">			
 						<a href="form.html?class=A&type=class">Class A</a>
 					</h4>
@@ -40,7 +44,7 @@
 			</div>
 
 			<div class="panel panel-default">
-				<div id="classB-title" class="panel-heading">
+				<div id="classB-title" class="panel-heading clickable">
 					<h4 class="panel-title">
 						<a href="form.html?class=B&type=class">Class B</a>
 					</h4>
@@ -56,7 +60,7 @@
 			</div>
 
 			<div class="panel panel-default">
-				<div id="classC-title" class="panel-heading">
+				<div id="classC-title" class="panel-heading clickable">
 					<h4 class="panel-title">
 						<a href="form.html?class=C&type=class">Class C</a>
 					</h4>
@@ -86,8 +90,9 @@
 <footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
+  
 	<script type="text/javascript" src="../Library/chosen_v1.5.0/chosen.jquery.js"></script>
+	<script type="text/javascript" src="../Library/jquery-confirm.js"></script>
 	<script type="text/javascript" src="../Library/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/storage.js"></script>
@@ -130,6 +135,19 @@
         // Return the value
         return value;
     }
+    </script>
+
+    <script>
+    	$("div.clickable").click(function(){
+    	    // console.log("class");
+    	    window.location.href = $(this).find("a").first().attr("href");
+    	});
+
+    	$("li.clickable").click(function(){
+    	    // console.log("indiv");
+    	    window.location.href = $(this).find("a").first().attr("href");
+    	});
+
     </script>
 </footer>
 </html>

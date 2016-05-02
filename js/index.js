@@ -43,7 +43,11 @@ function createElement(student) {
     var options = $("<div/>", { "class": "student-prompt" });
     options.text("");
 
-    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone" });
+    var phoneIcon = $("<span/>", { "class": "student-icon glyphicon glyphicon-earphone"});
+
+        // part of popover implementation (changed to popup)
+        // , "data-toggle": "popover", "title": "Contact Info", "data-content": "Dad: (617)710-6158", "data-trigger": "focus" });
+
     // phoneIcon.click(function() {
     //     window.location.href = "individual-form.html";
     // });
@@ -88,4 +92,34 @@ function createElement(student) {
 
 $(function() {
     populatePage();
+
+    $(".glyphicon-earphone").click(function () { // callParents confirmation popup
+        $.confirm({
+            title: 'Confirmation',
+            content: 'Call (510) 888-8888?',
+            confirmButton: 'Cancel',
+            cancelButton: 'Call',
+            cancelButtonClass: 'btn btn-confirm-default',
+            confirmButtonClass: 'btn btn-custom-cancel',
+            icon: 'fa fa-info',
+            cancel: function () {
+                alert('Calling...');
+            }
+        });
+    });
+
+    // Contact info in popover (changed to popup)
+    // $(".glyphicon-earphone").popover(
+    //         {'content': "",
+    //             'title': "",
+    //             'tabindex': "0",
+    //             'data-trigger': "focus",
+    //             'trigger': 'focus click',
+    //             'placement': 'top'});
+
+    $('.glyphicon-earphone').on(':visible', function(e){
+        console.log(e);
+    });
+
+    // $('[data-toggle="popover"]').popover(); 
 });

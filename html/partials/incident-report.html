@@ -11,7 +11,7 @@
 
 	<div class="participants">
 		<!-- <div class="children-search"> -->
-		<h4>Children Involved</h4>
+		<h4>Children Involved*</h4>
 			<div class="col-lg-12 search-container" style="padding: 0">
 				<div class="input-group" style="width: 100%">
 						<select multiple class="search-for" data-placeholder="Search For..">
@@ -39,14 +39,14 @@
 		</div>
 
 		<div class="description">
-			<h4>Description of Incident</h4>
+			<h4>Description of Incident*</h4>
 			<textarea name="description-input" cols="75" rows="5" wrap="virtual"></textarea>
-			<h4>Care Given</h4>
+			<h4>Care Given*</h4>
 			<textarea name="description-input" cols="75" rows="5" wrap="virtual"></textarea>
 		</div>
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn btn-custom" data-dismiss="modal">Send to Parents</button>
+	<button type="button" class="btn btn-custom send-btn" >Send to Parents</button>
 </div>
 </div>
 
@@ -58,5 +58,88 @@
 		$(this).addClass('active');
 	});
 
-	$('.search-for').chosen({width: '100%'})
+	$('.search-for').chosen({width: '100%'});
+
+	//Checks if any field has a value
+	var getIsAnyFilledOut = function () {
+		var filledOut = false;
+		var textAreas = $('.modal').find('textarea');
+		textAreas.each(function(){
+			if ($(this).text() != "" || $(this).val() != "")
+				filledOut = true;
+		});
+		var selectedOptions = $('.modal').find('.search-choice');
+		if (selectedOptions.length > 0)
+			filledOut = true;
+
+		return filledOut;
+	}
+
+	//Checks if all fields have a value.
+	var getIsAllFilledOut = function(){
+		var filledOut = true;
+		var textAreas = $('.modal').find('textarea');
+		textAreas.each(function(){
+			if ($(this).text() == "" && $(this).val() == "")
+				filledOut = false;
+		});
+		var selectedOptions = $('.modal').find('.search-choice');
+		if (selectedOptions.length == 0)
+			filledOut = false;
+
+		return filledOut;
+	}
+
+	$('.send-btn').click(function(){
+		if (getIsAllFilledOut()){
+			$.confirm({
+	            title: 'Confirmation',
+	            content: 'Do you want to send the incident report to the parents?',
+	            confirmButton: 'Cancel',
+	            cancelButton: 'Send',
+	            cancelButtonClass: 'btn btn-confirm-default',
+	            confirmButtonClass: 'btn btn-custom-cancel',
+	            cancel: function () {
+	                $('.modal').addClass('can-close');
+	                $('.modal').modal('hide');
+	                $('.jconfirm').hide();
+	                alert('Report sent successfully');
+	            }
+	        });
+		} else {
+			alert('Please fill out all the fields.');
+		}
+	});
+
+	//Safety check when closing the modal
+	$('.modal').on('hide.bs.modal', function(){
+		var textAreas = $('.modal').find('textarea');
+		var selectedOptions = $('.modal').find('.search-choice');
+
+		if ($('.modal').hasClass('can-close')){
+			$('.modal').removeClass('can-close');
+			textAreas.text("");
+			textAreas.val("");
+			$('.search-for').val('').trigger('chosen:updated');
+			return true;
+		}
+
+		var shouldHide = !getIsAnyFilledOut();
+		if (!shouldHide){
+			$.confirm({
+				title: 'Warning',
+				content: 'Closing the report will clear all of the fields. Are you sure you want to exit?',
+				confirmButton: 'No',
+				cancelButton: 'Yes',
+				cancelButtonClass: 'btn btn-custom',
+				confirmButtonClass: 'btn btn-cancel-default',
+				cancel: function(){
+					$('.modal').addClass('can-close');
+					$('.modal').modal('hide');
+				}
+			});
+		}
+		return shouldHide;
+	});
+
 </script>

@@ -143,5 +143,4 @@ function isClassCategory(formSection) {
         return false;
     }
     return true;
-    
 }

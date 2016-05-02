@@ -85,12 +85,14 @@ $(function () {
         $.confirm({
             title: 'Print',
             content: getWarningMessage("print"),
-            confirmButton: 'Continue to Print',
-            cancelButton: 'Return to Export Screen',
-            cancelButtonClass: 'btn btn-custom',
-            confirmButtonClass: 'btn btn-custom',
+            // warning: cancel button is actually confirm button
+            // (for compliance with jquery-confirm layout)
+            cancelButton: 'Continue to Print',
+            confirmButton: 'Cancel',
+            confirmButtonClass: 'btn btn-custom-cancel',
+            cancelButtonClass: 'btn btn-confirm-default',
             icon: 'fa fa-info',
-            confirm: function () {
+            cancel: function () {
                 alert('Logs printed successfully');
             }
         });
@@ -100,11 +102,13 @@ $(function () {
         $.confirm({
             title: 'Email',
             content: getWarningMessage("email"),
-            confirmButton: 'Send Email to Parents',
-            cancelButton: 'Return to Export Screen',
-            cancelButtonClass: 'btn btn-custom',
-            confirmButtonClass: 'btn btn-custom',
-            confirm: function () {
+            // warning: cancel button is actually confirm button
+            // (for compliance with jquery-confirm layout)
+            cancelButton: 'Send Email to Parents',
+            confirmButton: 'Cancel',
+            confirmButtonClass: 'btn btn-custom-cancel',
+            cancelButtonClass: 'btn btn-confirm-default',
+            cancel: function () {
                 alert('Logs emailed successfully');
             }
         });
