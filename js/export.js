@@ -1,20 +1,7 @@
 $(function () {
 
-    var warning = {};
+    var warning = {joe: 0, kyle: 0, mandy: 0, sarah: 0};
     
-    var table = $('#student-table');
-    var rows = table.children();
-    for (var r in rows) {
-        var row = rows[r];
-        if (row.nodeName=="TR"){
-            if ($(row).children()[2].innerText=='') {
-                warning[row.id] = false;
-            } else {
-                warning[row.id] = true;
-            }
-        }
-    } 
-
     // creating preview
     var classData = {};
     classData.joe = JSON.parse(window.localStorage.getItem("Joe Desler"));
@@ -22,17 +9,34 @@ $(function () {
     classData.mandy = JSON.parse(window.localStorage.getItem("Mandy Wu"));
     classData.sarah = JSON.parse(window.localStorage.getItem("Sarah Brown"));
     $(".textarea").each(function() {
+        console.log(1);
         var name = $(this).attr("class").split(" ")[1];
         var indivData = classData[name];
         var sectionName = $(this).attr("id");
         var formSection = sectionName.split("-")[0];
         var info = document.createElement("p");
         $(info).text(indivData[formSection]);
-        if (indivData[formSection] == ""){
-            warning[name] = true;
+        if (indivData[formSection] == "" || indivData[formSection] == "\n\n"){
+            //newlines get added if you erase old class data
+            warning[name] = warning[name] + 1;
         }
         $(this).html(info);
     });
+
+    var table = $('#student-table');
+    var rows = table.children();
+    for (var r in rows) {
+        var row = rows[r];
+        if (row.nodeName=="TR"){
+            if (warning[row.id] == 6){
+                row.className = "warning";
+                row.children[2].innerHTML = "Absent: No sections completed";
+            } else if (warning[row.id]) {
+                row.className = "warning";
+                row.children[2].innerHTML = "Missing Forms <span class=\"badge\">" + warning[row.id] + "</span>";
+            }
+        }
+    }
 
     setCarouselHeight('#carousel-example');
 
@@ -61,10 +65,7 @@ $(function () {
 		var table = $('#student-table');
         var rows = table.children();
         for (var r = 0; r < rows.length; r++){
-            if (isChecked)
-                rows[r].className = "active";
-            else
-                rows[r].className = warning[rows[r].id] ? 'warning' : '';
+            rows[r].className = warning[rows[r].id] ? 'warning' : '';
             $(rows[r]).find('input:checkbox').prop('checked', isChecked);
         }
 	});
@@ -74,9 +75,6 @@ $(function () {
         if (this.className=='active'){
             if (warning[this.id]){
                 this.className='warning';
-                removeDisplay(this.id);
-                console.log(display);
-                updateDisplay();
             } else {
                 this.className='';
             }
