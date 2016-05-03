@@ -23,6 +23,15 @@ body, html {
     padding: 0;
 }
 
+#carousel-wrapper {
+    margin-top: 80px;
+}
+
+.carousel-content {
+    color:black;
+    display:flex;
+}
+
 .selection{
     text-align: left;
     height: 532px;

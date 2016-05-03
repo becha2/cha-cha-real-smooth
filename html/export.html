@@ -40,29 +40,123 @@
                     </div>
                 </div>
                 <div class="selection">
-                    <div class="students" id="classA">
+                    <div class="students" id="classB">
                         <table class="table table-hover">
                         <thead>
                             <tr><th><input type="checkbox" id="checkAll"/></th><th>Class B Students</th><th>Notes</th></tr>
                         </thead>
                         <tbody id="student-table">
-                            <tr class="active" id="joe"><td><input type="checkbox" checked/></td><td>Joe</td><td>Missing Forms <span class="badge">1</span></td></tr>
-                            <tr id="kyle"><td><input type="checkbox"/></td><td>Kyle</td><td></td></tr>
-                            <tr id="mandy"><td><input type="checkbox"/></td><td>Mandy</td><td></td></tr>
-                            <tr class="warning" id="sarah"><td><input type="checkbox"/></td><td>Sarah</td><td>Absent</td></tr>
+                            <tr class="active" id="joe"><td><input type="checkbox" checked/></td><td>Joe Desler</td><td>Missing Forms <span class="badge">1</span></td></tr>
+                            <tr id="kyle"><td><input type="checkbox"/></td><td>Kyle Jones</td><td></td></tr>
+                            <tr id="mandy"><td><input type="checkbox"/></td><td>Mandy Wu</td><td></td></tr>
+                            <tr class="warning" id="sarah"><td><input type="checkbox"/></td><td>Sarah Brown</td><td>Absent</td></tr>
                         </tbody>
                         </table>
                     </div>
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="preview col-sm-5">
-                <b>Preview</b>
-                <div id="pdf">
-                <iframe src="../sampleForms/joe.pdf" height="600px"></iframe>
+            <div id="carousel-wrapper">
+            <div id="carousel-example" class="carousel slide col-sm-offset-1 col-sm-4" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="carousel-content">
+                                    <div>
+                                        <h3>Previewing Joe's Log</h3>
+                                        <h4>May 4, 2016</h4>                            
+                                        <div id="childName" class="textarea joe"></div>
+                                        <h5><b>Parent Comments</b></h5>
+                                        <div id="parent" class="textarea joe"></div>
+                                        <h5><b>Activities</b></h5>
+                                        <div id="activities" class="textarea joe"></div>
+                                        <h5><b>Food</b></h5>
+                                        <div id="food" class="textarea joe"></div>
+                                        <h5><b>Naps</b></h5>
+                                        <div id="naps" class="textarea joe"></div>
+                                        <h5><b>Diaper Changes</b></h5>
+                                        <div id="diaper" class="textarea joe"></div>
+                                        <h5><b>Notes</b></h5>
+                                        <div id="other" class="textarea joe"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="carousel-content">
+                                    <div>
+                                        <h3>Previewing Kyle's Log</h3>  
+                                        <h4>May 4, 2016</h4>                                                      
+                                        <div id="childName" class="textarea kyle"></div>
+                                        <h5><b>Parent Comments</b></h5>
+                                        <div id="parent" class="textarea kyle"></div>
+                                        <h5><b>Activities</b></h5>
+                                        <div id="activities" class="textarea kyle"></div>
+                                        <h5><b>Food</b></h5>
+                                        <div id="food" class="textarea kyle"></div>
+                                        <h5><b>Naps</b></h5>
+                                        <div id="naps" class="textarea kyle"></div>
+                                        <h5><b>Diaper Changes</b></h5>
+                                        <div id="diaper" class="textarea kyle"></div>
+                                        <h5><b>Notes</b></h5>
+                                        <div id="other" class="textarea kyle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="carousel-content">
+                                    <div>
+                                        <h3>Previewing Mandy's Log</h3>  
+                                        <h4>May 4, 2016</h4>                                                      
+                                        <div id="childName" class="textarea mandy"></div>
+                                        <h5><b>Parent Comments</b></h5>
+                                        <div id="parent" class="textarea mandy"></div>
+                                        <h5><b>Activities</b></h5>
+                                        <div id="activities" class="textarea mandy"></div>
+                                        <h5><b>Food</b></h5>
+                                        <div id="food" class="textarea mandy"></div>
+                                        <h5><b>Naps</b></h5>
+                                        <div id="naps" class="textarea mandy"></div>
+                                        <h5><b>Diaper Changes</b></h5>
+                                        <div id="diaper" class="textarea mandy"></div>
+                                        <h5><b>Notes</b></h5>
+                                        <div id="other" class="textarea mandy"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="carousel-content">
+                                    <div>
+                                        <h3>Previewing Sarah's Log</h3> 
+                                        <h4>May 4, 2016</h4>                                                       
+                                        <div id="childName" class="textarea sarah"></div>
+                                        <h5><b>Parent Comments</b></h5>
+                                        <div id="parent" class="textarea sarah"></div>
+                                        <h5><b>Activities</b></h5>
+                                        <div id="activities" class="textarea sarah"></div>
+                                        <h5><b>Food</b></h5>
+                                        <div id="food" class="textarea sarah"></div>
+                                        <h5><b>Naps</b></h5>
+                                        <div id="naps" class="textarea sarah"></div>
+                                        <h5><b>Diaper Changes</b></h5>
+                                        <div id="diaper" class="textarea sarah"></div>
+                                        <h5><b>Notes</b></h5>
+                                        <div id="other" class="textarea sarah"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
             </div>
-            <div class="col-sm-1"></div>
+            </div>
         </div>
     </div>
     
