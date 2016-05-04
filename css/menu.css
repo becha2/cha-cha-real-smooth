@@ -45,6 +45,8 @@
 .list-group-item {
 	background-color: white;
 	color: #bdbdbd;
+	padding: 0;
+	line-height: 40px;
 }
 
 .list-group-item a {
@@ -53,7 +55,7 @@
 }
 
 .indicator {
-	width: 3px;
+	width: 5px;
 	height: 20px;
 	float: left;
 	background-color: transparent;
@@ -61,8 +63,8 @@
 }
 
 .indicator-active {
-	width: 3px;
-	height: 20px;
+	width: 5px;
+	height: 40px;
 	float: left;
 	background-color: #7e5c94;
 	vertical-align: middle;

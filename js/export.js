@@ -1,6 +1,7 @@
 $(function () {
 
     var warning = {joe: 0, kyle: 0, mandy: 0, sarah: 0};
+    var checked = {joe: true, kyle: false, mandy: false, sarah: false};
     
     // creating preview
     var classData = {};
@@ -9,7 +10,6 @@ $(function () {
     classData.mandy = JSON.parse(window.localStorage.getItem("Mandy Wu"));
     classData.sarah = JSON.parse(window.localStorage.getItem("Sarah Brown"));
     $(".textarea").each(function() {
-        console.log(1);
         var name = $(this).attr("class").split(" ")[1];
         var indivData = classData[name];
         var sectionName = $(this).attr("id");
@@ -28,7 +28,7 @@ $(function () {
     for (var r in rows) {
         var row = rows[r];
         if (row.nodeName=="TR"){
-            if (warning[row.id] == 6){
+            if (warning[row.id] == 5){
                 row.className = "warning";
                 row.children[2].innerHTML = "Absent: No sections completed";
             } else if (warning[row.id]) {
@@ -67,6 +67,7 @@ $(function () {
         for (var r = 0; r < rows.length; r++){
             rows[r].className = warning[rows[r].id] ? 'warning' : '';
             $(rows[r]).find('input:checkbox').prop('checked', isChecked);
+            checked[rows[r].id] = isChecked ? true : false;
         }
 	});
 
@@ -78,8 +79,10 @@ $(function () {
             } else {
                 this.className='';
             }
+            checked[this.id] = false;
         } else {
             this.className='active';
+            checked[this.id] = true;
         }
         var shouldBeChecked = this.className == 'active';
         $(this).find('input:checkbox').prop('checked', shouldBeChecked);
@@ -124,7 +127,7 @@ $(function () {
     function getWarningMessage(method){
         var warn = "There are warnings for:\n";
         Object.keys(warning).forEach(function(key,index) {
-            if (warning[key]){
+            if (warning[key] && checked[key]){
                 warn += ("- " + key.slice(0,1).toUpperCase() + key.slice(1) + "\n");
             }
         });
