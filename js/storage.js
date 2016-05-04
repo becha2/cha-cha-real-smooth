@@ -12,10 +12,13 @@ function buildLocalStorage() {
     // First create storage for class updates
     for (var i = 0; i < classNames.length; i++) {
         className = classNames[i];
-        classData = {"activities" : "", 
+        classData = {
+                        "activities" : "", 
                         "food" : "",
                         "naps" : "",
-                        "students" : []};
+                        "last-saved-time" : $.now(),
+                        "students" : []
+                    };
         switch (className) {
             case "A":
                 classData["students"] = studentsA;
@@ -33,7 +36,8 @@ function buildLocalStorage() {
         var studentNames = classData["students"];
         for (var j = 0; j < studentNames.length; j++) {
             var indivName = studentNames[j];
-            indivData = {"parent" : "",
+            indivData = {
+                            "parent" : "",
                             "activities" : "",
                             "food" : "",
                             "naps" : "",
@@ -41,13 +45,16 @@ function buildLocalStorage() {
                             "other" : "",
                             "activities-individual" : "",
                             "food-individual" : "",
-                            "naps-individual" : ""};
+                            "naps-individual" : "",
+                            "last-saved-time" : $.now()
+                        };
             window.localStorage.setItem(indivName, JSON.stringify(indivData));
         }
     }
 }
 
 $(function() {
+    localStorage.clear();
     if (!window.localStorage.length) {
         buildLocalStorage();
     }

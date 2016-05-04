@@ -72,6 +72,8 @@ $(function () {
             $(this).val(classData[formSection]);
         });
     }
+    
+    $(".last-saved-date").first().text(new Date().toLocaleDateString(navigator.language, {weekday: 'long', month: 'long',  day: '2-digit', year: 'numeric'}));
 
     $('.section-heading').click(function(){
         var parent = $(this).parent();
@@ -91,20 +93,31 @@ $(function () {
         var input = textField.val();
         var parentName = $(this).parent().attr("id");
         var formSection = parentName.split("-")[0];
+        var name = "";
         
         if (formType === "individual") {
-            var indivName = getValue('name');
-            updateIndividualData(indivName, formSection, input);
+            name = getValue('name');
+            updateIndividualData(name, formSection, input);
         } else {
-            var className = getValue("class");
-            updateClassData(className, formSection, input);
+            name = getValue("class");
+            updateClassData(name, formSection, input);
         }
         
         var sectionHeading = $(this).parent().prev();
         sectionHeading.click();
         $("#save-dialog").fadeIn("slow").delay(2000).fadeOut();
-        var time = new Date($.now());
-        $(".last-saved-time").first().text(time.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}));
+        
+        var newTime = $.now();
+        
+        var data = JSON.parse(window.localStorage.getItem(name));
+        console.log(name);
+        console.log(data);
+        var lastSavedTime = data["last-saved-time"];
+        
+        var time = new Date(newTime - lastSavedTime);
+        data["last-saved-time"] = newTime;
+        window.localStorage.setItem(name, JSON.stringify(data));
+        $(".last-saved-time").first().text(time.toLocaleTimeString(navigator.language, {minute:'numeric'}) + " minutes ago.");
     });
 
     $("#classA-title").click(function(){
