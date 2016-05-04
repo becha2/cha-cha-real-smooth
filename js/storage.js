@@ -54,7 +54,6 @@ function buildLocalStorage() {
 }
 
 $(function() {
-    localStorage.clear();
     if (!window.localStorage.length) {
         buildLocalStorage();
     }
