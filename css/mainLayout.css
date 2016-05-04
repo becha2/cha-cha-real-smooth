@@ -2,6 +2,7 @@ body {
     margin: 0px;
 	font-family: "Gill Sans MT", Verdana, Arial, sans-serif;
     background-color: #f2f2f2;
+    min-width: 750px;
 }
 
 body > * {

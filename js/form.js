@@ -9,16 +9,16 @@ $(function () {
             "color": "#ebebeb"
         });
 
-        $("a:contains('"+indivName+"')").css({
-            "color": "#562A72",
-            "font-weight": "bold"
-        });
+        // $("a:contains('"+indivName+"')").css({
+        //     "color": "#562A72",
+        //     "font-weight": "bold"
+        // });
 
-        $("a:contains('"+indivName+"')").parent().children("div").addClass('indicator-active').removeClass('indicator');
+        // $("a:contains('"+indivName+"')").parent().children("div").addClass('indicator-active').removeClass('indicator');
 
-        $("a:contains('"+indivName+"')").parent().children("div").css({
-            "class":"indicator-active"
-        });
+        // $("a:contains('"+indivName+"')").parent().children("div").css({
+        //     "class":"indicator-active"
+        // });
 
         var indivNameContent = $('.form-content').find('.indiv-name');
         if (indivName && indivName != "") {;
@@ -65,7 +65,7 @@ $(function () {
         
         var classData = JSON.parse(window.localStorage.getItem(className));
         $('.form-content').find('.indiv-contact').text(classData["students"].join(', '));
-        // console.log(classData);
+        
         $("#accordion textarea").each(function() {
             var parentName = $(this).parent().attr("id");
             var formSection = parentName.split("-")[0];

@@ -1,11 +1,30 @@
 $(function(){
     $(document).ready(function(){
+        var setActive = function(activeSection){
+            console.log(activeSection);
+            activeSection.css({
+                "background": "#562A72",
+                "color":"#ebebeb"
+            });
+            activeSection.addClass('active');
+            activeSection.collapse('show');
+        }
+
         var openClass = getValue("class");
-        if (openClass == "A") { $('#classA-body').collapse('show'); }
-        else if (openClass == "B") { $('#classB-body').collapse('show'); }
-        else if (openClass == "C") { $('#classC-body').collapse('show'); }
-        else {
-            $('#classB-body').collapse('show');
+        var activeClass = '#class' + openClass + '-body';
+        setActive($(activeClass));
+
+        var indivName = getValue("name");
+        if (indivName && indivName != ""){
+            $("a:contains('"+indivName+"')").css({
+                "color": "#562A72",
+                "font-weight": "bold"
+            });
+            $("a:contains('"+indivName+"')").parent().children("div").addClass('indicator-active').removeClass('indicator');
+
+            $("a:contains('"+indivName+"')").parent().children("div").css({
+                "class":"indicator-active"
+            });
         }
 
         var formType = getValue("type");
