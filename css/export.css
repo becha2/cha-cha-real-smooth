@@ -27,6 +27,18 @@ body, html {
     margin-top: 80px;
 }
 
+
+.carousel-control.left, .carousel-control.right {
+  background: none !important;
+  filter: progid: none !important;
+  outline: 0px;
+}
+
+#inner-section{
+    padding: 0px 20px 20px 20px;
+    /*border: 1px solid black;*/
+}
+
 .carousel-content {
     color:black;
     display:flex;

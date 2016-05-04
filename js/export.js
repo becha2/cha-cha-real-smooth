@@ -28,7 +28,7 @@ $(function () {
     for (var r in rows) {
         var row = rows[r];
         if (row.nodeName=="TR"){
-            if (warning[row.id] == 6){
+            if (warning[row.id] == 5){
                 row.className = "warning";
                 row.children[2].innerHTML = "Absent: No sections completed";
             } else if (warning[row.id]) {
