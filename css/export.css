@@ -23,10 +23,6 @@ body, html {
     padding: 0;
 }
 
-#carousel-wrapper {
-    margin-top: 80px;
-}
-
 
 .carousel-control.left, .carousel-control.right {
   background: none !important;
@@ -35,21 +31,36 @@ body, html {
 }
 
 #inner-section{
-    padding: 0px 20px 20px 20px;
-    /*border: 1px solid black;*/
+    padding: 10px 20px 20px 20px;
+    background-color: #525659;
 }
 
 .carousel-content {
-    color:black;
+    color: black;
+    background-color: white;
+    padding: 36px;
     display:flex;
+    border: 1px solid #393939;
+    height: 580px;
+}
+
+.carousel-content h3 {
+    margin: 0;
+}
+
+.preview-label {
+    color: #e2e2e2;
+    margin-bottom: 10px;
 }
 
 .selection{
+    background-color: white;
     text-align: left;
-    height: 532px;
+    height: 535px;
     margin-top: 20px;
     border: 1px solid #393939;
     overflow: hidden;
+    box-shadow: 0 0 5px -3px #999999
 }
 
 .preview {
@@ -83,6 +94,15 @@ iframe{
 #student-table {
     cursor: pointer;
     overflow-y: auto;
+}
+
+.class-section {
+    background-color: #525659;
+}
+
+.class-section th {
+    font-weight: 500;
+    color: white;
 }
 
 input[type="checkbox"] {

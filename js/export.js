@@ -65,14 +65,14 @@ $(function () {
 		var table = $('#student-table');
         var rows = table.children();
         for (var r = 0; r < rows.length; r++){
-            rows[r].className = warning[rows[r].id] ? 'warning' : '';
+            rows[r].className = isChecked ? 'active' : (warning[rows[r].id] ? 'warning' : '');
             $(rows[r]).find('input:checkbox').prop('checked', isChecked);
             checked[rows[r].id] = isChecked ? true : false;
         }
 	});
 
     $('tr').click(function(){
-        if ($(this).children()[2].innerText=="Notes"){ return; }
+        if ($(this).hasClass('class-section')){ return; }
         if (this.className=='active'){
             if (warning[this.id]){
                 this.className='warning';
@@ -89,6 +89,8 @@ $(function () {
         if (!shouldBeChecked)
             $('#checkAll').prop('checked', false);
     });
+
+    $('#joe').click();
 
     $('#print').click(function () { // print confirmation popup
         $.confirm({
@@ -125,17 +127,21 @@ $(function () {
             
 
     function getWarningMessage(method){
-        var warn = "There are warnings for:\n";
+        var warnBeginning = 'There are warnings for:<br/>';
+        var warnEnding = '<br/>Do you want to continue anyway?';
+        var warn = [];
         Object.keys(warning).forEach(function(key,index) {
             if (warning[key] && checked[key]){
-                warn += ("- " + key.slice(0,1).toUpperCase() + key.slice(1) + "\n");
+                warn.push('- ' + key.slice(0,1).toUpperCase() + key.slice(1) + '<br/>');
             }
         });
-        if (warn.slice(-2)!=":\n") {
-            return (warn.slice(0,-1) + ". Do you want to continue anyway?");
-        } else {
+        if (warn.length > 0)
+            return warnBeginning + warn.join('') + warnEnding;
+        // if (warn.slice(-2)!=":<br/>") {
+        //     return (warn.slice(0,-1) + ". Do you want to continue anyway?");
+        // } else {
             return "Are you sure you want to "+method+" ?";
-        }
+        
     }
 });
 
